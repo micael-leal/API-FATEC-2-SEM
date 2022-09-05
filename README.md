@@ -37,3 +37,49 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 + - [X] Documentações
 
 <br>
+
+<h1 align="center"><samp>TECNOLOGIAS</samp></h1>
+
+![Equipe bytech](/src/main/resources/Tecnologia.png)
+
+<table align="center">
+  <tr>
+    <th><b>Back-end</b></th>
+    <th><b>Ferramentas</b></th>
+  </tr>
+  <tr>
+    <td>Java</td>
+    <td>MySQL</td>
+  </tr>
+  <tr>
+    <td>SQL</td>
+    <td>Figma</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Git</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Github</td>
+  </tr>
+</table>
+
+<br>
+<h1 align="center"><samp>CRONOGRAMA DAS SPRINTS</samp></h1>
+
+
+<br>
+<h1 align="center"><samp>PRODUCT BACKLOG</samp></h1>
+
+![Equipe bytech](/src/main/resources/Product%20Backlog.png)
+
+<h1 align="center"><samp>SPRINT BACKLOG</samp></h1>
+
+![Equipe bytech](/src/main/resources/Sprint%20Backlog.png)
+
+<br>
+<h1 align="center"><samp>BURNDOWN DAS SPRINTS</samp></h1>
+
+<br>
+<h1 align="center"><samp>PRIMEIRA SPRINT</samp></h1>
