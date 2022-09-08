@@ -15,6 +15,7 @@ public class Main extends Application {
     private static Scene channelConfigScreenToken;
     private static Scene channelConfigScreenUserPass;
     private static Scene activeConfigScreen;
+    private static Scene cadastroCanais;
 
     @Override
     public void start(Stage primaryStage) {
@@ -30,10 +31,14 @@ public class Main extends Application {
 
             AnchorPane fxmlActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigAtiva.fxml")));
             activeConfigScreen = new Scene(fxmlActiveConfigScreen);
+
+            AnchorPane fxmlChannelRegister = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlCadastroCanais.fxml")));
+            cadastroCanais = new Scene(fxmlChannelRegister);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(activeConfigScreen);
+        primaryStage.setScene(cadastroCanais);
         primaryStage.show();
     }
 
