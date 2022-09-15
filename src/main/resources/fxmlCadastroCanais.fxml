@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroCanaisController">
     <children>
         <VBox prefHeight="550.0" prefWidth="1100.0">
@@ -27,23 +26,18 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1105.0" style="-fx-background-color: FFFFFF;">
                     <children>
-                        <ChoiceBox layoutX="340.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-background-color: F9FAFB;" />
+                        <ChoiceBox fx:id="type_channel" layoutX="340.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-background-color: F9FAFB;" />
                         <Text fill="#ff3e15" layoutX="100.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Canais" wrappingWidth="204.7294921875" AnchorPane.bottomAnchor="378.478515625" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="858.2705078125" AnchorPane.topAnchor="50.0">
                             <font>
                                 <Font name="System Bold" size="22.0" />
                             </font>
                         </Text>
-                        <TextField fx:id="newCanal" layoutX="100.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: F9FAFB;" AnchorPane.leftAnchor="100.0">
+                        <TextField fx:id="channel_input_field" layoutX="100.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: F9FAFB;" AnchorPane.leftAnchor="100.0">
                             <font>
                                 <Font name="Ubuntu" size="14.0" />
                             </font>
                         </TextField>
-                        <TextField layoutX="515.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: F9FAFB;" AnchorPane.leftAnchor="580.0">
-                            <font>
-                                <Font name="Ubuntu" size="14.0" />
-                            </font>
-                        </TextField>
-                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="819.0" layoutY="152.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold;" text="Salvar" />
+                        <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="819.0" layoutY="152.0" mnemonicParsing="false" onAction="#saveChannelAction" prefHeight="34.0" prefWidth="186.0" style="-fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold;" text="Salvar" />
                         <Text fill="#464646" layoutX="40.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canal" wrappingWidth="204.7294921875" AnchorPane.leftAnchor="100.0">
                             <font>
                                 <Font size="14.0" />
@@ -54,12 +48,13 @@
                                 <Font size="14.0" />
                             </font>
                         </Text>
-                        <Text fill="#464646" layoutX="515.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID do Canal" wrappingWidth="204.7294921875" AnchorPane.leftAnchor="580.0">
+                        <Text fill="#464646" layoutX="515.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Padrão de Autentificação " wrappingWidth="204.7294921875" AnchorPane.leftAnchor="580.0">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Text>
                         <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ChoiceBox fx:id="authentication_type" layoutX="580.0" layoutY="153.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-background-color: F9FAFB;" />
                     </children>
                 </AnchorPane>
             </children>
