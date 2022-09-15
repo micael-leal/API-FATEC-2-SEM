@@ -45,7 +45,13 @@ public class ConfigAtivaController implements Initializable {
             resultSet = stmt.executeQuery();
             while (resultSet.next()) {
                 registeredChannelList.add(new RegisteredChannel(
-                        resultSet.getInt()
+                        resultSet.getInt("id"),
+                        resultSet.getInt("user_id"),
+                        resultSet.getInt("channel_id"),
+                        resultSet.getString("channel_name"),
+                        resultSet.getString("token"),
+                        resultSet.getString("login"),
+                        resultSet.getString("password")
                 ));
             }
             conn.close();
