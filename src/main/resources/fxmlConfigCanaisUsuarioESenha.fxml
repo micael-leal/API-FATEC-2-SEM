@@ -34,27 +34,27 @@
                                     <Font name="Ubuntu Bold" size="24.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="nomeDoCanal" layoutX="36.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelName" layoutX="36.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="36.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite seu usuário" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelUserLogin" layoutX="36.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite seu usuário" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="idDoCanal" layoutX="260.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="123456789" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelId" layoutX="260.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="123456789" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="260.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite sua senha" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelUserPassword" layoutX="260.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite sua senha" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="244.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-width: 1;" text="Salvar" />
+                              <Button fx:id="channelSubmitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="244.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-width: 1;" text="Salvar" />
                               <Text fill="#464646" layoutX="36.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canal" wrappingWidth="204.7294921875">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />

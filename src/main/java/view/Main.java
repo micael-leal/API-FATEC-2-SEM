@@ -39,7 +39,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
 
-        primaryStage.setScene(activeConfigScreen);
+        primaryStage.setScene(channelRegisterScreen);
         primaryStage.show();
     }
 
