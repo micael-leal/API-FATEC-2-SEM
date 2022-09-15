@@ -21,7 +21,7 @@ public class CadastroCanaisController implements Initializable {
     @FXML
     private ChoiceBox<String> authentication_type;
 
-    private String[] list_type_authentication = {"Usuário e Senha", "Token"};
+    private String[] list_type_authentication = {"TOKEN", "LOGIN"};
 
     @FXML
     private TextField channel_input_field;
@@ -40,6 +40,7 @@ public class CadastroCanaisController implements Initializable {
         DefaultChannel defaultChannel = new DefaultChannel();
         defaultChannel.setName(channel);
         defaultChannel.setType(type_c);
+        defaultChannel.setAuth(type_a);
 
         DefaultChannelDAO defaultChannelDAO = new DefaultChannelDAO();
         defaultChannelDAO.addChannel(defaultChannel);
