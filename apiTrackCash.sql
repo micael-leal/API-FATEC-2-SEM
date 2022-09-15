@@ -16,7 +16,7 @@ INSERT INTO defaultChannels (`name`, `type`, `auth`) VALUES ('Mercado Livre', 'M
                                                             ('Amazon', 'Marketplace', 'TOKEN'),
                                                             ('B2w', 'Marketplace', 'LOGIN'),
                                                             ('Dafiti', 'Marketplace', 'LOGIN'),
-                                                            ('GetNet', 'Meio ed Pagamento', 'TOKEN'),
+                                                            ('GetNet', 'Meio de Pagamento', 'TOKEN'),
                                                             ('Carrefour', 'Marketplace', 'TOKEN'),
                                                             ('Bling', 'Plataforma/ERP', 'LOGIN'),
                                                             ('Magazine Luiza', 'Marketplace', 'LOGIN');
@@ -49,8 +49,6 @@ CREATE TABLE `registeredChannelLogin` (
     CONSTRAINT `fk_registeredChannelLogin_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
     CONSTRAINT `fk_registeredChannelLogin_channel` FOREIGN KEY (`channel_id`) REFERENCES `defaultChannels` (`channel_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_UNICODE_CI;
-
-INSERT INTO registeredChannelLogin (user_id, channel_id, login, password) VALUES ();
 
 CREATE TABLE `registeredChannelToken` (
     `registeredChannelToken_id` INT NOT NULL AUTO_INCREMENT,

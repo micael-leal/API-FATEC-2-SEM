@@ -14,8 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfigAtivaController">
    <children>
       <VBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -61,18 +60,18 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="483.0" prefWidth="676.0">
                            <children>
-                              <TableView prefHeight="283.0" prefWidth="455.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                              <TableView fx:id="tableView" prefHeight="283.0" prefWidth="455.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                                 <columns>
-                                  <TableColumn editable="false" prefWidth="75.0" text="ID" />
-                                  <TableColumn editable="false" prefWidth="75.0" text="CANAL" />
-                                    <TableColumn editable="false" prefWidth="75.0" text="CONTA" />
-                                    <TableColumn editable="false" prefWidth="75.0" text="AÇÕES" />
+                                  <TableColumn fx:id="columnID" editable="false" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="columnCHANNEL" editable="false" prefWidth="75.0" text="CANAL" />
+                                    <TableColumn fx:id="columnACCOUNT" editable="false" prefWidth="75.0" text="CONTA" />
+                                    <TableColumn fx:id="columnACTION" editable="false" prefWidth="75.0" text="AÇÕES" />
                                 </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                  </columnResizePolicy>
                               </TableView>
-                              <Pagination layoutX="48.0" layoutY="252.0" prefHeight="483.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Pagination fx:id="pagination" layoutX="48.0" layoutY="252.0" prefHeight="483.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
