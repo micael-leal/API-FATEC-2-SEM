@@ -1,0 +1,5 @@
+.actionButtons {
+    -fx-background-color: transparent;
+    -fx-start-margin: 20px;
+    -fx-cursor: hand;
+}
