@@ -4,24 +4,24 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
-public class TestSelectDB {
+public class GetChannelById {
 
     static int channel_id;
     static String name;
     static String type;
+    static String authType;
 
     public static void setChannel_id(int channel_id) {
-        TestSelectDB.channel_id = channel_id;
+        GetChannelById.channel_id = channel_id;
     }
 
     public static void setName(String name) {
-        TestSelectDB.name = name;
+        GetChannelById.name = name;
     }
 
     public static void setType(String type) {
-        TestSelectDB.type = type;
+        GetChannelById.type = type;
     }
 
     public static int getChannel_id() {
@@ -36,13 +36,24 @@ public class TestSelectDB {
         return type;
     }
 
-    public TestSelectDB() {
+    public GetChannelById() {
         this.channel_id = channel_id;
         this.name = name;
         this.type = type;
+        this.authType = authType;
     }
 
-    public static void main(String[] args) {
+    public static String getAuthType() {
+        return authType;
+    }
+
+    public static void setAuthType(String authType) {
+        GetChannelById.authType = authType;
+    }
+
+    public static Channel GetChannel(int channel_id) {
+        String id = new String();
+        id = Integer.toString(channel_id);
 
         Statement s = null;
         Connection con = new ConnectionFactory().getConnection();
@@ -54,7 +65,7 @@ public class TestSelectDB {
 
         ResultSet r = null;
         try {
-            r = s.executeQuery("SELECT * FROM defaultchannel WHERE channel_id='2'");
+            r = s.executeQuery("SELECT * FROM defaultChannels WHERE channel_id=" + id);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -64,13 +75,27 @@ public class TestSelectDB {
                 setChannel_id(r.getInt("channel_id"));
                 setName(r.getString("name"));
                 setType(r.getString("type"));
+                setAuthType(r.getString("auth"));
             }
 
             r.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        Channel channel = new Channel(channel_id, name, type, authType);
+
+        return channel;
+    }
+
+    public static void main(String[] args) {
+        Channel channel = GetChannel(5);
+
+        System.out.println(channel.getId());
+        System.out.println(channel.getName());
+        System.out.println(channel.getType());
+        System.out.println(channel.getAuthType());
 
     }
 }
