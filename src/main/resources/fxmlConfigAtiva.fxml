@@ -23,7 +23,7 @@
                <children>
                   <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0">
                      <image>
-                        <Image url="@TRACKCASH%20LOGO.png" />
+                        <Image url="@trackcash_logo.png" />
                      </image>
                   </ImageView>
                </children>
