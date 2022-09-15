@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.Channel;
+import model.GetChannelById;
 
 import java.util.Objects;
 
@@ -36,6 +38,7 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         primaryStage.setScene(activeConfigScreen);
         primaryStage.show();
     }

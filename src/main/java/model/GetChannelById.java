@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class GetChannelById {
-
     static int channel_id;
     static String name;
     static String type;
@@ -90,12 +89,5 @@ public class GetChannelById {
     }
 
     public static void main(String[] args) {
-        Channel channel = GetChannel(5);
-
-        System.out.println(channel.getId());
-        System.out.println(channel.getName());
-        System.out.println(channel.getType());
-        System.out.println(channel.getAuthType());
-
     }
 }
