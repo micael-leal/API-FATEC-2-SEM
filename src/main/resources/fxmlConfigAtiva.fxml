@@ -64,7 +64,6 @@
                                 <columns>
                                   <TableColumn fx:id="columnID" editable="false" prefWidth="75.0" text="ID" />
                                   <TableColumn fx:id="columnCHANNEL" editable="false" prefWidth="75.0" text="CANAL" />
-                                    <TableColumn fx:id="columnACCOUNT" editable="false" prefWidth="75.0" text="CONTA" />
                                     <TableColumn fx:id="columnACTION" editable="false" prefWidth="75.0" text="AÇÕES" />
                                 </columns>
                                  <columnResizePolicy>
