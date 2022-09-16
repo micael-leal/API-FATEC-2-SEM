@@ -78,6 +78,7 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 <br>
 <h1 align="center"><samp>CRONOGRAMA DAS SPRINTS</samp></h1>
 
+![Equipe bytech](/src/main/resources/Cronograma%20das%20Sprints.png)
 
 <br>
 <h1 align="center"><samp>PRODUCT BACKLOG</samp></h1>
@@ -95,6 +96,16 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 <h1 align="center"><samp>PRIMEIRA SPRINT</samp></h1>
 
 ![Equipe bytech](/src/main/resources/Burndown_1.png)
+
+<br>
+<h1 align="center"><samp>DETALHES DAS SPRINTS</samp></h1>
+<h2>Sprint 1</h2>
+<details>
+  <summary>Detalhes</summary>
+  <h3 align="center">Demonstração de usabilidade</h3>
+  <br>
+  
+  
 
 <br>
 <h1 align="center"><samp>EQUIPE</samp></h1>
