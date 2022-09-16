@@ -3,10 +3,9 @@ package view;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.Channel;
-import model.GetChannelById;
 
 import java.util.Objects;
 
@@ -22,6 +21,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         stage = primaryStage;
         primaryStage.setResizable(false);
+        Image staqeIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icon.png")));
+        primaryStage.getIcons().add(staqeIcon);
 
         try {
             AnchorPane fxmlChannelConfigScreenToken = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisToken.fxml")));
@@ -38,7 +39,6 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         primaryStage.setScene(channelRegisterScreen);
         primaryStage.show();
     }
