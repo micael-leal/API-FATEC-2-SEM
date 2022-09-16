@@ -6,8 +6,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import model.DefaultChannel;
-import model.DefaultChannelDAO;
+import model.Channel;
+import model.NewChannel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,15 +35,17 @@ public class CadastroCanaisController implements Initializable {
 
         String type_c = type_channel.getValue();
         String type_a = authentication_type.getValue();
-        String channel = channel_input_field.getText();
+        String channel_name = channel_input_field.getText();
 
-        DefaultChannel defaultChannel = new DefaultChannel();
-        defaultChannel.setName(channel);
-        defaultChannel.setType(type_c);
-        defaultChannel.setAuth(type_a);
+        Channel channel = new Channel(
+        0,
+        channel_name,
+        type_c,
+        type_a
+        );
 
-        DefaultChannelDAO defaultChannelDAO = new DefaultChannelDAO();
-        defaultChannelDAO.addChannel(defaultChannel);
+        NewChannel newChannel = new NewChannel();
+        newChannel.addChannel(channel);
     }
 
     @Override

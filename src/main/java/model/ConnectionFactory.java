@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     public static Connection getConnection() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/apiTrackCash", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/apiTrackCash", "root", "Casilveira020197*");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
