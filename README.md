@@ -113,7 +113,7 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
   </tr>
    <tr>
     <td>Micael Leal</td>
-    <td>Master</td>
+    <td>Scrum Master</td>
     <td><a href="https://github.com/micael-leal">Github</a></td>
     <td><a href=""></a></td>
   </tr>
