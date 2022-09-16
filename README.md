@@ -28,7 +28,7 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 
 ### 📖 Requisitos funcionais
 + - [x] Cadastro de canais (marketplaces e meios de pagamentos)
-+ - [x] Configuração de canais
++ - [x] Configuração de canais (usuário/senha e token)
 + - [x] Configurações ativas
 
 ### 🔖 Requisitos não funcionais
@@ -94,6 +94,7 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 <br>
 <h1 align="center"><samp>PRIMEIRA SPRINT</samp></h1>
 
+![Equipe bytech](/src/main/resources/Burndown_1.png)
 
 <br>
 <h1 align="center"><samp>EQUIPE</samp></h1>
