@@ -44,24 +44,34 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 
 <table align="center">
   <tr>
+    <th><b>Front-end</b></th>
     <th><b>Back-end</b></th>
     <th><b>Ferramentas</b></th>
   </tr>
   <tr>
+    <td>JavaFX</td>
     <td>Java</td>
     <td>MySQL</td>
   </tr>
   <tr>
+    <td></td>
     <td>SQL</td>
     <td>Figma</td>
   </tr>
   <tr>
     <td></td>
+    <td></td>
     <td>Git</td>
   </tr>
   <tr>
     <td></td>
+    <td></td>
     <td>Github</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td></td>
+    <td>Scene Builder</td>
   </tr>
 </table>
 
@@ -83,3 +93,66 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 
 <br>
 <h1 align="center"><samp>PRIMEIRA SPRINT</samp></h1>
+
+
+<br>
+<h1 align="center"><samp>EQUIPE</samp></h1>
+
+<table align="center">
+  <tr>
+    <th><b>Nome</b></th>
+    <th><b>Função</b></th>
+    <th><b>Github</b></th>
+    <th><b>Linked-In</b></th>
+  </tr>
+    <tr>
+    <td>João Henrique</td>
+    <td>Product Owner</td>
+    <td><a href="https://github.com/JoaoHenrique7">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-trist%C3%A3o-b63385207/">Linked-In</a></td>
+  </tr>
+   <tr>
+    <td>Micael Leal</td>
+    <td>Master</td>
+    <td><a href="https://github.com/micael-leal">Github</a></td>
+    <td><a href=""></a></td>
+  </tr>
+    <tr>
+    <td>Camila Redondo</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/CamilaRedondo">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/camila-silveira-redondo-7941631ab/">Linked-In</a></td>
+  </tr>
+  <tr>
+    <td>Gustavo Marques</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/gusta7597">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/gustavo-marques-lima-695b331a2/">Linked-In</a></td>
+  </tr>
+    <tr>
+    <td>Henrique Neto</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/henriqFerreira">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/henriquepfneto/">Linked-In</a></td>
+  </tr>
+  <tr>
+    <td>Leandro Aquino</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/leandroteixeira97">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/leandroteixeira97/">Linked-In</a></td>
+  </tr>
+  <tr>
+    <td>Simone Kanzawa</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/Simonehk">Github</a></td>
+    <td><a href=""></a></td>
+  </tr>
+  <tr>
+    <td>Yago Pereira</td>
+    <td>Desenvolvedor</td>
+    <td><a href="https://github.com/YagoPSilva">Github</a></td>
+    <td><a href="https://www.linkedin.com/in/yago-pereira21/">Linked-In</a></td>
+  </tr>
+
+</table>
+

@@ -21,5 +21,9 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:linux:18.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:18.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:linux:18.0.2" level="project" />
+    <orderEntry type="library" name="Maven: io.github.cdimascio:java-dotenv:5.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
   </component>
 </module>

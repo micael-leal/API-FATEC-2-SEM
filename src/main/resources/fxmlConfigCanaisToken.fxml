@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfigCanaisController">
    <children>
       <SplitPane dividerPositions="0.15" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -35,17 +34,17 @@
                                     <Font name="Ubuntu Bold" size="24.0" />
                                  </font>
                               </Text>
-                              <TextField layoutX="36.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelName" layoutX="36.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="36.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite seu token" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelToken" layoutX="36.0" layoutY="176.0" prefHeight="34.0" prefWidth="205.0" promptText="Digite seu token" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="260.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="123456789" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
+                              <TextField fx:id="channelId" layoutX="260.0" layoutY="98.0" prefHeight="34.0" prefWidth="205.0" promptText="123456789" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: e5e5e5;">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
