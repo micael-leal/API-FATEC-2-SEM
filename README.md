@@ -103,11 +103,35 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 <details>
   <summary>Detalhes</summary>
   <h3 align="center">Demonstração de usabilidade</h3>
+   <br>
+  <h4 align="center">Tela Cadastro de Canais<br><a href="https://www.youtube.com/watch?v=UtJIXQ2DS-o">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Cadastro_canais_adm.gif " width="65%" />
+  </p>
+  <p>Demonstração da tela de cadastro de canais e aplicação no banco de dados.Esta interface contempla a execução do cadastro de canais (p.ex. Mercado Livre, Americanas), tipo de canal (p.ex. Marketplace) e o padrão de autenticação (Usuário/senha ou Token). Bem como, a aplicação do banco de dados – armazenamento das informações cadastrais. </p>
   
- </details>
+    <br>
+  <h4 align="center">Tela de Configurações de Canais – Usuário e Senha <br><a href="https://www.youtube.com/watch?v=s-h25q8byrY">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_canais_user.gif " width="65%" />
+  </p>
+  <p>Demonstração da tela de configurações de canais versão Usuário e Senha. Esta interface abrange a configuração do canal por meio de um Usuário e Senha.</p>
   
-  
+  <br>
+  <h4 align="center">Tela de Configurações de Canais – Token <br><a href="https://www.youtube.com/watch?v=Ayp1KyIrV_s">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_canais_token.gif " width="65%" />
+  </p>
+  <p>Demonstração da tela de configurações de canais versão Token. Esta interface abrange a configuração do canal por meio de um Token.</p>
 
+<br>
+  <h4 align="center">Tela de Configurações Ativas<br><a href="https://www.youtube.com/watch?v=PDNR33mpV70">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_ativas.gif " width="65%" />
+  </p>
+  <p>Demonstração da tela de configurações ativas. Esta interface contempla todas as configurações já realizadas e oferece para o cliente a opção de consulta e edição (p.ex. Editar e Deletar) dos canais já cadastrados.</p>
+</details>
+  
 <br>
 <h1 align="center"><samp>EQUIPE</samp></h1>
 
