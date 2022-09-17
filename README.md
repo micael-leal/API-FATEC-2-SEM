@@ -103,7 +103,7 @@ Desenvolver um sistema desktop capaz de armazenar informações cadastrais objet
 <details>
   <summary>Detalhes</summary>
   <h3 align="center">Demonstração de usabilidade</h3>
-  <br>
+  
  </details>
   
   
