@@ -140,7 +140,6 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <p align="justify">A princípio foram identificadas as seguintes entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm informações sobre o canal (chave primária), nome, tipo e padrão de autenticação. A entidade <i>users</i> abriga informações relativas aos usuários (chave primária), nome, e-mail, senha, telefone, documento e tipo de usuário. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
   
   <br>
-  <h3 align="center">Modelo de dados relacional</h3>
   <h4 align="center">Modelo lógico<br></h4>
   <p align="center">
     <img src="/src/main/resources/apiTrackCashERDiagrama.png" width="65%" />
