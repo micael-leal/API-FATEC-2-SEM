@@ -138,6 +138,21 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
     <img src="/src/main/resources/Diagramtrackcash.bmp" width="65%" />
   </p>
   <p align="justify">A princípio foram identificadas as seguintes entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm informações sobre o canal (chave primária), nome, tipo e padrão de autenticação. A entidade <i>users</i> abriga informações relativas aos usuários (chave primária), nome, e-mail, senha, telefone, documento e tipo de usuário. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
+  
+  <br>
+  <h3 align="center">Modelo de dados relacional</h3>
+  <h4 align="center">Modelo lógico<br></h4>
+  <p align="center">
+    <img src="/src/main/resources/apiTrackCashERDiagrama.png" width="65%" />
+  </p>
+  <p align="justify">O modelo de dados lógico é caracterizado pelas entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm os seguintes atributos: <i>channel_id</i> (chave primária) do tipo inteiro, <i>name</i> do tipo baseado em caracteres, <i>type</i> do tipo caracteres; e <i>auth</i> baseado em carateres. A entidade <i>users</i> abriga os atributos: <i>user_id</i> (chave primária) do tipo inteiro, <i>name</i> do tipo baseado em caracteres, <i>email</i> do tipo baseado em caracteres, <i>password</i> do tipo baseado em caracteres, <i>phone</i> do tipo baseado em inteiro, <i>document</i> do tipo baseado em caracteres e <i>type_adm</i> do tipo baseado em caracteres. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária do tipo inteiro; <i>login</i> do tipo baseado em caracteres; <i>password</i> do tipo baseado em caracteres; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária do tipo inteiro; <i>token</i> do tipo inteiro; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
+    <p align="justify">As relações entre as entidades são:</p>
+    <ul>
+      <li align="justify"><b>1:N</b> - <i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
+      <li align="justify"><b>1:N</b> - <i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
+      <li align="justify"><b>1:N</b> - <i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
+      <li align="justify"><b>1:N</b> - <i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
+    </ul>
 </details>
   
 <br>
