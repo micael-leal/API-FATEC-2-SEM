@@ -108,28 +108,28 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <p align="center">
     <img src=" /src/main/resources/Cadastro_canais_adm.gif " width="65%" />
   </p>
-  <p>Demonstração da tela de cadastro de canais e aplicação no banco de dados.Esta interface contempla a execução do cadastro de canais (p.ex. Mercado Livre, Americanas), tipo de canal (p.ex. Marketplace) e o padrão de autenticação (Usuário/senha ou Token). Bem como, a aplicação do banco de dados – armazenamento das informações cadastrais. </p>
+  <p align="justify">Demonstração da tela de cadastro de canais e aplicação no banco de dados.Esta interface contempla a execução do cadastro de canais (p.ex. Mercado Livre, Americanas), tipo de canal (p.ex. Marketplace) e o padrão de autenticação (Usuário/senha ou Token). Bem como, a aplicação do banco de dados – armazenamento das informações cadastrais. </p>
   
  <br>
   <h4 align="center">Tela de Configurações de Canais – Usuário e Senha <br><a href="https://www.youtube.com/watch?v=s-h25q8byrY">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/Config_canais_user.gif " width="65%" />
   </p>
-  <p>Demonstração da tela de configurações de canais versão Usuário e Senha. Esta interface abrange a configuração do canal por meio de um Usuário e Senha.</p>
+  <p align="justify">Demonstração da tela de configurações de canais versão Usuário e Senha. Esta interface abrange a configuração do canal por meio de um Usuário e Senha.</p>
   
  <br>
   <h4 align="center">Tela de Configurações de Canais – Token <br><a href="https://www.youtube.com/watch?v=Ayp1KyIrV_s">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/Config_canais_token.gif " width="65%" />
   </p>
-  <p>Demonstração da tela de configurações de canais versão Token. Esta interface abrange a configuração do canal por meio de um Token.</p>
+  <p align="justify">Demonstração da tela de configurações de canais versão Token. Esta interface abrange a configuração do canal por meio de um Token.</p>
 
 <br>
   <h4 align="center">Tela de Configurações Ativas<br><a href="https://www.youtube.com/watch?v=PDNR33mpV70">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/Config_ativas.gif " width="65%" />
   </p>
-  <p>Demonstração da tela de configurações ativas. Esta interface contempla todas as configurações já realizadas e oferece para o cliente a opção de consulta e edição (p.ex. Editar e Deletar) dos canais já cadastrados.</p>
+  <p align="justify">Demonstração da tela de configurações ativas. Esta interface contempla todas as configurações já realizadas e oferece para o cliente a opção de consulta e edição (p.ex. Editar e Deletar) dos canais já cadastrados.</p>
   
 <br>
   <h3 align="center">Modelo de dados relacional</h3>
@@ -137,7 +137,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <p align="center">
     <img src="/src/main/resources/Diagramtrackcash.bmp" width="65%" />
   </p>
-  <p>A princípio foram identificadas as seguintes entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm informações sobre o canal (chave primária), nome, tipo e padrão de autenticação. A entidade <i>users</i> abriga informações relativas aos usuários (chave primária), nome, e-mail, senha, telefone, documento e tipo de usuário. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
+  <p align="justify">A princípio foram identificadas as seguintes entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm informações sobre o canal (chave primária), nome, tipo e padrão de autenticação. A entidade <i>users</i> abriga informações relativas aos usuários (chave primária), nome, e-mail, senha, telefone, documento e tipo de usuário. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
 </details>
   
 <br>
