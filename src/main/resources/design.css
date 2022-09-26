@@ -1,5 +1,91 @@
 .actionButtons {
     -fx-background-color: transparent;
-    -fx-start-margin: 20px;
+    -fx-start-margin: 30px;
     -fx-cursor: hand;
 }
+
+.background { -fx-background-color: white }
+
+.sidebar {
+    -fx-background-color: #2D124B;
+}
+
+.sidebarButtons {
+    -fx-background-color: #2D124B;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-font-family: Ubuntu;
+    -fx-font-size: 14;
+    -fx-padding: 0 0 0 16;
+    -fx-cursor: hand;
+}
+
+.sidebarSelectedButton {
+    -fx-background-color: white;
+    -fx-background-radius: 15 0 0 15;
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-font-family: Ubuntu;
+    -fx-font-size: 14;
+    -fx-padding: 0 0 0 16;
+}
+
+.searchField {
+    -fx-padding: 10;
+    -fx-border-width: 2;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.headerText {
+    -fx-fill: #FF3E15;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.table-view { -fx-background-color: transparent; }
+.table-view .column-header-background {-fx-background-color: #FF3E15; }
+.table-view .column-header { -fx-background-color: transparent; }
+.table-view .column-header-background .label {
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-color: transparent;
+}
+
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #FF3E15;
+    -fx-text-fill: white;
+}
+
+.logoutButton { -fx-text-fill: red; }
+
+.blackBg-text { -fx-fill: white; }

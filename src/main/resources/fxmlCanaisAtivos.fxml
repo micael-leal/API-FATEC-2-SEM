@@ -71,7 +71,7 @@
                      <children>
                         <AnchorPane prefHeight="100.0" prefWidth="870.0">
                            <children>
-                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Configurações ativas" />
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Canais ativos" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="450.0" prefWidth="870.0">
