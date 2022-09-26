@@ -1,9 +1,6 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class GetRegisteredChannelById {
 
@@ -72,6 +69,17 @@ public class GetRegisteredChannelById {
         try {
             r = s.executeQuery("SELECT * FROM registeredChannelToken WHERE registeredChannelToken_id=" + id);
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        try{
+            PreparedStatement stmt;
+            stmt = con.prepareStatement("INSERT INTO registeredChannelToken(user_id, channel_id, token) VALUES (1, ?, ?)");
+            stmt.setInt(1, channel_id);
+            stmt.setString(2, token);
+            stmt.execute();
+            con.close();
+        } catch (SQLException e){
             e.printStackTrace();
         }
 
@@ -149,9 +157,5 @@ public class GetRegisteredChannelById {
 
     public static void setRegisteredChannelToken_id(int registeredChannelToken_id) {
         GetRegisteredChannelById.registeredChannelToken_id = registeredChannelToken_id;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
