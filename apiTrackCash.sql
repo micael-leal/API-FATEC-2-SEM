@@ -50,6 +50,22 @@ CREATE TABLE `registeredChannelLogin` (
     CONSTRAINT `fk_registeredChannelLogin_channel` FOREIGN KEY (`channel_id`) REFERENCES `defaultChannels` (`channel_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_UNICODE_CI;
 
+INSERT INTO registeredChannelLogin (user_id, channel_id, login, password) VALUES ("1", "2", "login11", "senha11"),
+																				 ("1", "5", "login12", "senha12"),
+                                                                                 ("1", "6", "login13", "senha13"),
+                                                                                 ("1", "9", "login14", "senha14"),
+                                                                                 ("1", "10", "login15", "senha15"),
+                                                                                 ("2", "2", "login11", "senha11"),
+																				 ("2", "5", "login12", "senha12"),
+                                                                                 ("2", "6", "login13", "senha13"),
+                                                                                 ("2", "9", "login14", "senha14"),
+                                                                                 ("2", "10", "login15", "senha15"),
+                                                                                 ("3", "2", "login11", "senha11"),
+																				 ("3", "5", "login12", "senha12"),
+                                                                                 ("3", "6", "login13", "senha13"),
+                                                                                 ("3", "9", "login14", "senha14"),
+                                                                                 ("3", "10", "login15", "senha15");
+
 CREATE TABLE `registeredChannelToken` (
     `registeredChannelToken_id` INT NOT NULL AUTO_INCREMENT,
     `user_id` INT NOT NULL,
@@ -61,3 +77,19 @@ CREATE TABLE `registeredChannelToken` (
     CONSTRAINT `fk_registeredChannelToke_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
     CONSTRAINT `fk_registeredChannelToken_channel` FOREIGN KEY (`channel_id`) REFERENCES `defaultChannels` (`channel_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_UNICODE_CI;
+
+INSERT INTO registeredChannelToken (user_id, channel_id, token) VALUES (1, 1, "DSAH783!*&@t#@&dh"),
+                                                                       (1, 3, "JDSA923(#@nc@(092"),
+                                                                       (1, 4, "AJS*(D#@(32jd98@#"),
+                                                                       (1, 7, "JDSA923(#@nc@(092"),
+                                                                       (1, 8, "AJS*(D#@(32jd98@#"),
+                                                                       (2, 1, "DSAH783!*&@t#@&dh"),
+                                                                       (2, 3, "JDSA923(#@nc@(092"),
+                                                                       (2, 4, "AJS*(D#@(32jd98@#"),
+                                                                       (2, 7, "JDSA923(#@nc@(092"),
+                                                                       (2, 8, "AJS*(D#@(32jd98@#"),
+                                                                       (3, 1, "DSAH783!*&@t#@&dh"),
+                                                                       (3, 3, "JDSA923(#@nc@(092"),
+                                                                       (3, 4, "AJS*(D#@(32jd98@#"),
+                                                                       (3, 7, "JDSA923(#@nc@(092"),
+                                                                       (3, 8, "AJS*(D#@(32jd98@#");

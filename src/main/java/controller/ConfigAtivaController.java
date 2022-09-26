@@ -24,7 +24,7 @@ public class ConfigAtivaController implements Initializable {
     @FXML
     private Pagination pagination;
     @FXML
-    private TableView tableView;
+    private TableView<RegisteredChannel> tableView;
     @FXML
     private TableColumn<RegisteredChannel, Integer> columnID;
     @FXML
@@ -35,15 +35,15 @@ public class ConfigAtivaController implements Initializable {
     private final int rowsPerPage = 10;
     private int pages = 1;
 
-    private ObservableList getRegisteredChannelData() {
+    private ObservableList<RegisteredChannel> getRegisteredChannelData() {
         PreparedStatement stmt;
         ResultSet resultSet;
         Connection conn;
         conn = ConnectionFactory.getConnection();
-        ObservableList registeredChannelList = FXCollections.observableArrayList();
+        ObservableList<RegisteredChannel> registeredChannelList = FXCollections.observableArrayList();
 
         try {
-            stmt = conn.prepareStatement("SELECT registeredChannelToken.*, defaultChannels.name FROM registeredChannelToken INNER JOIN defaultChannels ON registeredChannelToken.channel_id=defaultChannels.channel_id AND registeredChannelToken.user_id=1;");
+            stmt = conn.prepareStatement("SELECT registeredChannelToken.*, defaultChannels.name FROM registeredChannelToken INNER JOIN defaultChannels ON registeredChannelToken.channel_id=defaultChannels.channel_id AND registeredChannelToken.user_id=1");
             resultSet = stmt.executeQuery();
             while (resultSet.next()) {
                 registeredChannelList.add(new RegisteredChannel(
@@ -73,19 +73,6 @@ public class ConfigAtivaController implements Initializable {
     private void updateTable() {
         columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnCHANNEL.setCellValueFactory(new PropertyValueFactory<>("channel_name"));
-        if (getRegisteredChannelData().size() % rowsPerPage == 0) {
-            pages = getRegisteredChannelData().size() / rowsPerPage;
-        } else if (getRegisteredChannelData().size() > rowsPerPage) {
-            pages = getRegisteredChannelData().size() / rowsPerPage + 1;
-        }
-        pagination.setPageCount(pages);
-        pagination.setCurrentPageIndex(0);
-        pagination.setPageFactory(this::generatePages);
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        updateTable();
         columnACTION.setCellFactory(param -> new TableCell<>() {
             private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
@@ -97,6 +84,7 @@ public class ConfigAtivaController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
+                    editButton.getStyleClass().add("actionButtons");
                     editButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -104,13 +92,14 @@ public class ConfigAtivaController implements Initializable {
                         alert.show();
 
                     });
+                    deleteButton.getStyleClass().add("actionButtons");
                     deleteButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
-                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
                         alert.setContentText("[DELETE] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
                         Optional<ButtonType> result = alert.showAndWait();
 
-                        if (result.get() == ButtonType.OK) {
+                        if (result.orElse(null) == ButtonType.OK) {
                             PreparedStatement stmt;
                             Connection conn;
                             conn = ConnectionFactory.getConnection();
@@ -130,5 +119,19 @@ public class ConfigAtivaController implements Initializable {
                 }
             }
         });
+
+        if (getRegisteredChannelData().size() % rowsPerPage == 0) {
+            pages = getRegisteredChannelData().size() / rowsPerPage;
+        } else if (getRegisteredChannelData().size() > rowsPerPage) {
+            pages = getRegisteredChannelData().size() / rowsPerPage + 1;
+        }
+        pagination.setPageCount(pages);
+        pagination.setCurrentPageIndex(0);
+        pagination.setPageFactory(this::generatePages);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateTable();
     }
 }
