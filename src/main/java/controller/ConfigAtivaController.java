@@ -87,7 +87,7 @@ public class ConfigAtivaController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateTable();
         columnACTION.setCellFactory(param -> new TableCell<>() {
-            private final Button editButton = new Button("Edit");
+//            private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
             @Override
             public void updateItem(String item, boolean empty) {
@@ -97,13 +97,13 @@ public class ConfigAtivaController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-                    editButton.setOnAction(event -> {
-                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
-                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                        alert.setContentText("[EDIT] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
-                        alert.show();
-
-                    });
+//                    editButton.setOnAction(event -> {
+//                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
+//                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                        alert.setContentText("[EDIT] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
+//                        alert.show();
+//
+//                    });
                     deleteButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -125,7 +125,8 @@ public class ConfigAtivaController implements Initializable {
                             }
                         }
                     });
-                    HBox buttonsPane = new HBox(editButton, deleteButton);
+                    //HBox buttonsPane = new HBox(editButton, deleteButton);
+                    HBox buttonsPane = new HBox(deleteButton);
                     setGraphic(buttonsPane);
                 }
             }

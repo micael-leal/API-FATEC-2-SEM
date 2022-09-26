@@ -49,7 +49,7 @@
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
                               </TextField>
-                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="177.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-width: 1;" text="Salvar" />
+                              <Button fx:id="channelSubmitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="177.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-width: 1;" text="Salvar" />
                               <Text fill="#464646" layoutX="36.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canal" wrappingWidth="204.7294921875">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />

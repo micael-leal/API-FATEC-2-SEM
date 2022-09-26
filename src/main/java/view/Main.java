@@ -39,7 +39,9 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(channelRegisterScreen);
+//        primaryStage.setScene(channelRegisterScreen);
+//        primaryStage.setScene(channelConfigTokenScreen);
+//        primaryStage.setScene(activeConfigScreen);
         primaryStage.show();
     }
 
