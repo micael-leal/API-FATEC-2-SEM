@@ -12,8 +12,9 @@ import java.util.Objects;
 public class Main extends Application {
 
     private static Stage stage;
-    private static Scene channelConfigTokenScreen;
-    private static Scene channelConfigLoginScreen;
+    private static Scene channelConfigScreen;
+    //private static Scene channelConfigTokenScreen;
+    //private static Scene channelConfigLoginScreen;
     private static Scene activeConfigScreen;
     private static Scene channelRegisterScreen;
 
@@ -25,11 +26,14 @@ public class Main extends Application {
         primaryStage.getIcons().add(staqeIcon);
 
         try {
-            AnchorPane fxmlChannelConfigScreenToken = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisToken.fxml")));
-            channelConfigTokenScreen = new Scene(fxmlChannelConfigScreenToken);
+            //AnchorPane fxmlChannelConfigScreenToken = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisToken.fxml")));
+            //channelConfigTokenScreen = new Scene(fxmlChannelConfigScreenToken);
 
-            AnchorPane fxmlChannelConfigScreenUserPass = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisUsuarioESenha.fxml")));
-            channelConfigLoginScreen = new Scene(fxmlChannelConfigScreenUserPass);
+            //AnchorPane fxmlChannelConfigScreenUserPass = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisUsuarioESenha.fxml")));
+            //channelConfigLoginScreen = new Scene(fxmlChannelConfigScreenUserPass);
+
+            AnchorPane fxmlChannelConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanais.fxml")));
+            channelConfigScreen = new Scene(fxmlChannelConfigScreen);
 
             AnchorPane fxmlActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigAtiva.fxml")));
             activeConfigScreen = new Scene(fxmlActiveConfigScreen);
@@ -39,14 +43,15 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(activeConfigScreen);
+        primaryStage.setScene(channelConfigScreen);
         primaryStage.show();
     }
 
     public static void changeScene(String scene) {
         switch (scene) {
-            case "ConfigToken" -> stage.setScene(channelConfigTokenScreen);
-            case "ConfigLogin" -> stage.setScene(channelConfigLoginScreen);
+            //case "ConfigToken" -> stage.setScene(channelConfigTokenScreen);
+            //case "ConfigLogin" -> stage.setScene(channelConfigLoginScreen);
+            case "ConfigCanais" -> stage.setScene(channelConfigScreen);
             case "ActiveConfig" -> stage.setScene(activeConfigScreen);
             case "ChannelRegister" -> stage.setScene(channelRegisterScreen);
         }

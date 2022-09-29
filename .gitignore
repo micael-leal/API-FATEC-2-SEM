@@ -8,6 +8,7 @@ target/
 .idea/workspace.xml
 .idea/httpRequests/
 .idea/dataSources/
+.idea/dataSources.xml
 .idea/dataSources.local.xml
 .idea/modules.xml
 .idea/jarRepositories.xml
