@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
-
     private static Stage stage;
     private static Scene userChannelConfigScreen;
     private static Scene userActiveConfigScreen;
