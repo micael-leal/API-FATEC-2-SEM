@@ -74,7 +74,7 @@ public class ConfigAtivaController implements Initializable {
         columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnCHANNEL.setCellValueFactory(new PropertyValueFactory<>("channel_name"));
         columnACTION.setCellFactory(param -> new TableCell<>() {
-            private final Button editButton = new Button("Edit");
+//            private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
             @Override
             public void updateItem(String item, boolean empty) {
@@ -84,15 +84,13 @@ public class ConfigAtivaController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-                    editButton.getStyleClass().add("actionButtons");
-                    editButton.setOnAction(event -> {
-                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
-                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                        alert.setContentText("[EDIT] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
-                        alert.show();
-
-                    });
-                    deleteButton.getStyleClass().add("actionButtons");
+//                    editButton.setOnAction(event -> {
+//                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
+//                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                        alert.setContentText("[EDIT] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
+//                        alert.show();
+//
+//                    });
                     deleteButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
                         Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -114,7 +112,8 @@ public class ConfigAtivaController implements Initializable {
                             }
                         }
                     });
-                    HBox buttonsPane = new HBox(editButton, deleteButton);
+                    //HBox buttonsPane = new HBox(editButton, deleteButton);
+                    HBox buttonsPane = new HBox(deleteButton);
                     setGraphic(buttonsPane);
                 }
             }
