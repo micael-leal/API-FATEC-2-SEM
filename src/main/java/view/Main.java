@@ -15,7 +15,6 @@ public class Main extends Application {
     private static Scene channelConfigScreen;
     private static Scene activeConfigScreen;
     private static Scene channelRegisterScreen;
-
     private static Scene activeChannelsScreen;
 
     @Override
@@ -41,7 +40,7 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(activeChannelsScreen);
+        primaryStage.setScene(channelConfigScreen);
         primaryStage.show();
     }
 

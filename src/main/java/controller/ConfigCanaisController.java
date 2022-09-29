@@ -80,35 +80,5 @@ public class ConfigCanaisController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        channelSubmitButton.setOnAction(event -> {
-            Connection conn;
-            conn = ConnectionFactory.getConnection();
-            PreparedStatement stmt;
-            try {
-                stmt = conn.prepareStatement("INSERT INTO registeredChannelToken(user_id, channel_id, token) VALUES (1, ?, ?)");
-                stmt.setString(1, channelId.getText());
-                stmt.setString(2, channelToken.getText());
-                stmt.execute();
-                conn.close();
-
-//                RegisteredChannel rc = getTableView().getItems().get(getIndex());
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setContentText(("[INSERT] You have clicked: \n" ));
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-//            if(channel.getAuthType().equals("TOKEN")) {
-//                RegisteredChannelToken registeredChannelToken = GetRegisteredChannelById.GetChannelToken(channel.getId());
-//                channelName.setText(channel.getName());
-//                channelId.setText(Integer.toString(channel.getId()));
-//                channelToken.setText(registeredChannelToken.getToken());
-//            } else {
-//                RegisteredChannelLogin registeredChannelLogin = GetRegisteredChannelById.GetChannelLogin(channel.getId());
-//                channelName.setText(channel.getName());
-//                channelId.setText(Integer.toString((channel.getId())));
-//                channelUserLogin.setText(registeredChannelLogin.getLogin());
-//                channelUserPassword.setText((registeredChannelLogin.getPassword()));
-//            }
-        });
     }
 }
