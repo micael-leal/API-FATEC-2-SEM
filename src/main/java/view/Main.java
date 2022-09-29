@@ -57,6 +57,7 @@ public class Main extends Application {
             case "admDefaultChannel" -> {
                 stage.setScene(admDefaultChannelsScreen);
             }
+
         }
     }
 
