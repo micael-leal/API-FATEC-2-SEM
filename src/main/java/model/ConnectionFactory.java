@@ -13,13 +13,13 @@ public class ConnectionFactory {
 
     public static Connection getConnection() {
 
-//        Dotenv dotenv = Dotenv.load();
-//        username = dotenv.get("root");
-//        password = dotenv.get("Casilveira020197*");
+        Dotenv dotenv = Dotenv.load();
+        username = dotenv.get("USER_NAME");
+        password = dotenv.get("USER_PASSWORD");
 
 
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/apiTrackCash", "root", "Casilveira020197*");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/apiTrackCash", username, password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
