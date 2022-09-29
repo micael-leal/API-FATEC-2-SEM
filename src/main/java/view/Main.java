@@ -10,14 +10,11 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
-
     private static Stage stage;
-    private static Scene channelConfigTokenScreen;
-    private static Scene channelConfigLoginScreen;
-    private static Scene activeConfigScreen;
-    private static Scene channelRegisterScreen;
-
-    private static Scene activeChannelsScreen;
+    private static Scene userChannelConfigScreen;
+    private static Scene userActiveConfigScreen;
+    private static Scene admDefaultChannelRegisterScreen;
+    private static Scene admDefaultChannelsScreen;
 
     @Override
     public void start(Stage primaryStage) {
@@ -27,34 +24,39 @@ public class Main extends Application {
         primaryStage.getIcons().add(staqeIcon);
 
         try {
-            AnchorPane fxmlChannelConfigScreenToken = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisToken.fxml")));
-            channelConfigTokenScreen = new Scene(fxmlChannelConfigScreenToken);
+            AnchorPane fxmlUserChannelConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserChannelConfig.fxml")));
+            userChannelConfigScreen = new Scene(fxmlUserChannelConfigScreen);
 
-            AnchorPane fxmlChannelConfigScreenUserPass = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigCanaisUsuarioESenha.fxml")));
-            channelConfigLoginScreen = new Scene(fxmlChannelConfigScreenUserPass);
+            AnchorPane fxmlUserActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlActiveConfig.fxml")));
+            userActiveConfigScreen = new Scene(fxmlUserActiveConfigScreen);
 
-            AnchorPane fxmlActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlConfigAtiva.fxml")));
-            activeConfigScreen = new Scene(fxmlActiveConfigScreen);
+            AnchorPane fxmlAdmDefaultChannelRegister = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlAdmDefaultChannelRegister.fxml")));
+            admDefaultChannelRegisterScreen = new Scene(fxmlAdmDefaultChannelRegister);
 
-            AnchorPane fxmlChannelRegister = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlCadastroCanais.fxml")));
-            channelRegisterScreen = new Scene(fxmlChannelRegister);
-
-            AnchorPane fxmlActiveChannels = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlCanaisAtivos.fxml")));
-            activeChannelsScreen = new Scene(fxmlActiveChannels);
+            AnchorPane fxmlAdmDefaultChannels = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlAdmDefaultChannels.fxml")));
+            admDefaultChannelsScreen = new Scene(fxmlAdmDefaultChannels);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(activeChannelsScreen);
+        primaryStage.setScene(admDefaultChannelRegisterScreen);
         primaryStage.show();
     }
 
     public static void changeScene(String scene) {
         switch (scene) {
-            case "ConfigToken" -> stage.setScene(channelConfigTokenScreen);
-            case "ConfigLogin" -> stage.setScene(channelConfigLoginScreen);
-            case "ActiveConfig" -> stage.setScene(activeConfigScreen);
-            case "CadastroCanais" -> stage.setScene(channelRegisterScreen);
+            case "userChannelConfig" -> {
+                stage.setScene(userChannelConfigScreen);
+            }
+            case "userActiveConfig" -> {
+                stage.setScene(userActiveConfigScreen);
+            }
+            case "admDefaultChannelRegister" -> {
+                stage.setScene(admDefaultChannelRegisterScreen);
+            }
+            case "admDefaultChannel" -> {
+                stage.setScene(admDefaultChannelsScreen);
+            }
         }
     }
 

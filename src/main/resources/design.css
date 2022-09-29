@@ -86,6 +86,19 @@
     -fx-text-fill: white;
 }
 
+.combo-box-base {
+    -fx-background-color: white;
+}
+
 .logoutButton { -fx-text-fill: red; }
 
 .blackBg-text { -fx-fill: white; }
+
+.saveButton {
+    -fx-background-color: #FF3E15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
