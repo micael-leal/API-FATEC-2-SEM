@@ -2,32 +2,22 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-<<<<<<< HEAD
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-=======
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
->>>>>>> b37ffc373dd721f5eead0f57fc609f5f410d68b8
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import model.*;
-import model.RegisteredChannel;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-=======
-import java.sql.SQLException;
->>>>>>> b37ffc373dd721f5eead0f57fc609f5f410d68b8
 import java.util.ResourceBundle;
 
 public class ConfigCanaisController implements Initializable {
@@ -83,7 +73,6 @@ public class ConfigCanaisController implements Initializable {
             conn = ConnectionFactory.getConnection();
             ResultSet resultSet = conn.createStatement().executeQuery("SELECT name FROM defaultChannels");
 
-<<<<<<< HEAD
             while (resultSet.next()) {
                 channelList.add(resultSet.getString("name"));
             }
@@ -91,7 +80,6 @@ public class ConfigCanaisController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-=======
         channelSubmitButton.setOnAction(event -> {
             Connection conn;
             conn = ConnectionFactory.getConnection();
@@ -122,6 +110,5 @@ public class ConfigCanaisController implements Initializable {
 //                channelUserPassword.setText((registeredChannelLogin.getPassword()));
 //            }
         });
->>>>>>> b37ffc373dd721f5eead0f57fc609f5f410d68b8
     }
 }
