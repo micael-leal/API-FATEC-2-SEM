@@ -7,21 +7,17 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import model.Channel;
 import model.ConnectionFactory;
-import model.RegisteredChannel;
 import view.Main;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class CanaisAtivosController implements Initializable {
+public class admDefaultChannelsController implements Initializable {
     @FXML
     private Pagination pagination;
     @FXML

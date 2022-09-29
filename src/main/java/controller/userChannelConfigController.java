@@ -19,7 +19,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ConfigCanaisController implements Initializable {
+public class userChannelConfigController implements Initializable {
     @FXML
     private ComboBox<String> choiceCHANNEL;
     @FXML

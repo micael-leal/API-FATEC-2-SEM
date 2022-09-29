@@ -12,7 +12,7 @@ import model.NewChannel;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CadastroCanaisController implements Initializable {
+public class admDefaultChannelRegisterController implements Initializable {
     @FXML
     private ChoiceBox<String> type_channel;
 

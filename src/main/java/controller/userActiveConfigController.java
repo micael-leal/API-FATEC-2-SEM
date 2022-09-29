@@ -20,7 +20,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class ConfigAtivaController implements Initializable {
+public class userActiveConfigController implements Initializable {
     @FXML
     private Pagination pagination;
     @FXML
