@@ -37,13 +37,13 @@ public class Main extends Application {
             AnchorPane fxmlAdmDefaultChannels = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlAdmDefaultChannels.fxml")));
             admDefaultChannelsScreen = new Scene(fxmlAdmDefaultChannels);
 
-            AnchorPane fxmluserRegisterUser = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserRegister.fxml")));
-            userRegisterUserScreen = new Scene(fxmluserRegisterUser);
+            AnchorPane fxmlUserRegisterUser = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserRegister.fxml")));
+            userRegisterUserScreen = new Scene(fxmlUserRegisterUser);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(userChannelConfigScreen);
+        primaryStage.setScene(admDefaultChannelsScreen);
         primaryStage.show();
     }
 
@@ -64,7 +64,6 @@ public class Main extends Application {
             case "userRegisterUser" -> {
                 stage.setScene(userRegisterUserScreen);
             }
-
         }
     }
 

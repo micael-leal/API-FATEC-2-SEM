@@ -35,8 +35,8 @@ public class admDefaultChannelsController implements Initializable {
     private int pages = 1;
 
     @FXML
-    private void goToRegisterChannel(){
-        Main.changeScene("CadastroCanais");
+    private void goToAdmDefaultChannelRegister(){
+        Main.changeScene("admDefaultChannelRegister");
     }
 
     private ObservableList<Channel> getRegisteredChannelData() {

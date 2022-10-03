@@ -29,7 +29,7 @@ public class userChannelConfigController implements Initializable {
     private final ArrayList<String> channelList = new ArrayList<>();
 
     @FXML
-    private void goToActiveChannels() {
+    private void goToUserActiveChannels() {
         Main.changeScene("userActiveConfig");
     }
 
