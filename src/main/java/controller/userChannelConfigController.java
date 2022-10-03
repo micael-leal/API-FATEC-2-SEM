@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.*;
+import view.Main;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -28,6 +29,11 @@ public class userChannelConfigController implements Initializable {
     private final ArrayList<String> channelList = new ArrayList<>();
 
     @FXML
+    private void goToActiveChannels() {
+        Main.changeScene("userActiveConfig");
+    }
+
+    @FXML
     public void changeContent() {
         try {
             Connection conn;
@@ -45,10 +51,10 @@ public class userChannelConfigController implements Initializable {
                 Label tokenLabel = new Label("Insira o token:");
                 tokenField.getStyleClass().add("inputField");
                 tokenField.setPromptText("Ex: 43HBD39AB2UD4UEF...");
-                tokenField.setPrefWidth(350);
+                tokenField.setPrefWidth(300);
 
                 dynamicVBox.setAlignment(Pos.CENTER_LEFT);
-                dynamicVBox.setPadding(new Insets(0, 0, 0, 80));
+                dynamicVBox.setPadding(new Insets(0, 0, 0, 47));
                 dynamicVBox.getChildren().addAll(tokenLabel, tokenField);
             } else {
                 dynamicVBox.getChildren().clear();
@@ -61,8 +67,8 @@ public class userChannelConfigController implements Initializable {
                 Label passwordLabel = new Label("Senha:");
                 userField.getStyleClass().add("inputField");
                 passwordField.getStyleClass().add("inputField");
-                userField.setPrefWidth(350);
-                passwordField.setPrefWidth(350);
+                userField.setPrefWidth(300);
+                passwordField.setPrefWidth(300);
                 userField.setPromptText("Ex: seunome@email.com");
                 passwordField.setPromptText("Ex: as!98fjHD91is@");
 
@@ -70,7 +76,7 @@ public class userChannelConfigController implements Initializable {
                 field2.getChildren().addAll(passwordLabel, passwordField);
                 container.getChildren().addAll(field1, field2);
                 dynamicVBox.setAlignment(Pos.CENTER_LEFT);
-                dynamicVBox.setPadding(new Insets(0, 0, 0, 80));
+                dynamicVBox.setPadding(new Insets(0, 0, 0, 47));
                 dynamicVBox.getChildren().addAll(container);
             }
         } catch (SQLException e) {

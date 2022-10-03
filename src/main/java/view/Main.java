@@ -27,7 +27,7 @@ public class Main extends Application {
             AnchorPane fxmlUserChannelConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserChannelConfig.fxml")));
             userChannelConfigScreen = new Scene(fxmlUserChannelConfigScreen);
 
-            AnchorPane fxmlUserActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlActiveConfig.fxml")));
+            AnchorPane fxmlUserActiveConfigScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserActiveConfig.fxml")));
             userActiveConfigScreen = new Scene(fxmlUserActiveConfigScreen);
 
             AnchorPane fxmlAdmDefaultChannelRegister = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlAdmDefaultChannelRegister.fxml")));

@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import model.ConnectionFactory;
 import model.RegisteredChannel;
+import view.Main;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -34,6 +35,11 @@ public class userActiveConfigController implements Initializable {
 
     private final int rowsPerPage = 10;
     private int pages = 1;
+
+    @FXML
+    private void goToUserChannelConfig() {
+        Main.changeScene("userChannelConfig");
+    }
 
     private ObservableList<RegisteredChannel> getRegisteredChannelData() {
         PreparedStatement stmt;
