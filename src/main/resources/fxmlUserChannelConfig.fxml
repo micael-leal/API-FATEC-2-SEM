@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,18 +21,18 @@
                <children>
                   <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="73.0" prefWidth="230.0">
+                        <AnchorPane prefHeight="103.0" prefWidth="230.0">
                            <children>
-                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="59.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../API-FATEC-2-SEM/src/main/resources/trackcash_logo_branca.png" />
+                                    <Image url="@trackcash_logo_branca.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="62.0" prefWidth="230.0">
+                        <AnchorPane prefHeight="50.0" prefWidth="230.0">
                            <children>
-                              <Text layoutX="76.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                              <Text layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -40,7 +41,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button mnemonicParsing="false" onAction="#goToUserActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
@@ -66,17 +67,23 @@
                <children>
                   <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                        <AnchorPane prefHeight="170.0" prefWidth="870.0">
                            <children>
-                              <Text layoutX="60.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Configuração de canais" />
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Configuraçao de canais" AnchorPane.leftAnchor="47.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="225.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Text layoutX="82.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canal" />
-                              <TextField fx:id="fieldCHANNELID" layoutX="381.0" layoutY="105.0" prefHeight="40.0" prefWidth="210.0" promptText="Ex: 7435" styleClass="searchField" />
-                              <Text layoutX="381.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id do canal" />
-                              <ComboBox fx:id="choiceCHANNEL" layoutX="82.0" layoutY="105.0" onAction="#changeContent" prefHeight="40.0" prefWidth="230.0" styleClass="searchField" />
+                              <TextField fx:id="fieldCHANNELID" layoutX="346.0" layoutY="47.0" prefHeight="40.0" prefWidth="210.0" promptText="Ex: 7435" styleClass="searchField" AnchorPane.topAnchor="47.0" />
+                              <ComboBox fx:id="choiceCHANNEL" layoutX="47.0" layoutY="47.0" onAction="#changeContent" prefHeight="40.0" prefWidth="230.0" styleClass="searchField" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="47.0" />
+                              <Label layoutX="80.0" layoutY="32.0" text="Canal" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="28.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font></Label>
+                              <Label layoutX="346.0" layoutY="32.0" text="Id do canal" AnchorPane.topAnchor="28.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font></Label>
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="225.0" prefWidth="200.0" VBox.vgrow="ALWAYS">

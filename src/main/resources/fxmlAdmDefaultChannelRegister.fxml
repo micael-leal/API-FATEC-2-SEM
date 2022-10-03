@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,53 +13,97 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admDefaultChannelRegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admDefaultChannelRegisterController">
     <children>
-        <VBox prefHeight="550.0" prefWidth="1100.0">
-            <children>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: F9FAFB;">
-                    <children>
-                        <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
-                            <image>
-                                <Image url="@trackcash_logo.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1105.0" style="-fx-background-color: FFFFFF;">
-                    <children>
-                        <ChoiceBox fx:id="type_channel" layoutX="340.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-background-color: F9FAFB;" />
-                        <Text fill="#ff3e15" layoutX="100.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Canais" wrappingWidth="204.7294921875" AnchorPane.bottomAnchor="378.478515625" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="858.2705078125" AnchorPane.topAnchor="50.0">
-                            <font>
-                                <Font name="System Bold" size="22.0" />
-                            </font>
-                        </Text>
-                        <TextField fx:id="channel_input_field" layoutX="100.0" layoutY="152.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-padding: 8; -fx-background-color: F9FAFB;" AnchorPane.leftAnchor="100.0">
-                            <font>
-                                <Font name="Ubuntu" size="14.0" />
-                            </font>
-                        </TextField>
-                        <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="819.0" layoutY="152.0" mnemonicParsing="false" onAction="#saveChannelAction" prefHeight="34.0" prefWidth="186.0" style="-fx-padding: 8; -fx-background-color: FF3E15; -fx-text-fill: white; -fx-font-weight: bold;" text="Salvar" />
-                        <Text fill="#464646" layoutX="40.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Canal" wrappingWidth="204.7294921875" AnchorPane.leftAnchor="100.0">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </Text>
-                        <Text fill="#464646" layoutX="275.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Canal " wrappingWidth="204.7294921875" AnchorPane.leftAnchor="340.0">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </Text>
-                        <Text fill="#464646" layoutX="515.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Padrão de Autentificação " wrappingWidth="204.7294921875" AnchorPane.leftAnchor="580.0">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </Text>
-                        <HBox prefHeight="100.0" prefWidth="200.0" />
-                  <ChoiceBox fx:id="authentication_type" layoutX="580.0" layoutY="153.0" prefHeight="34.0" prefWidth="205.0" style="-fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: c7c7cd; -fx-background-color: F9FAFB;" />
-                    </children>
-                </AnchorPane>
-            </children>
-        </VBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="550.0" maxWidth="230.0" minHeight="550.0" minWidth="230.0" prefHeight="550.0" prefWidth="230.0" styleClass="sidebar">
+               <children>
+                  <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="73.0" prefWidth="230.0">
+                           <children>
+                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="59.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@trackcash_logo_branca.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="62.0" prefWidth="230.0">
+                           <children>
+                              <Text layoutX="76.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#goToAdmActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="buttomAddCanais" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Adicionar canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="buttonSair" mnemonicParsing="false" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                 <styleClass>
+                                    <String fx:value="sidebarButtons" />
+                                    <String fx:value="logoutButton" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefWidth="870.0" styleClass="background">
+               <children>
+                  <VBox prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="170.0" prefWidth="870.0">
+                           <children>
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Adicionar canais" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1105.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <TextField fx:id="channel_input_field" layoutX="46.0" layoutY="39.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" styleClass="searchField" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="39.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="646.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveChannelAction" prefHeight="34.0" prefWidth="186.0" styleClass="saveButton" text="Salvar" />
+                              <Label layoutX="46.0" layoutY="31.0" text="Canal" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="18.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="364.0" layoutY="18.0" text="Tipo de canal">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="47.0" layoutY="156.0" text="Tipo de autenticação">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="authentication_type" layoutX="46.0" layoutY="179.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" />
+                              <ComboBox fx:id="type_channel" layoutX="360.0" layoutY="42.0" prefHeight="40.0" prefWidth="210.0" styleClass="searchField" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
     </children>
 </AnchorPane>

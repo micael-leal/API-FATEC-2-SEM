@@ -5,21 +5,23 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import model.Channel;
 import model.NewChannel;
+import view.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class admDefaultChannelRegisterController implements Initializable {
     @FXML
-    private ChoiceBox<String> type_channel;
+    private ComboBox<String> type_channel;
 
     private String[] list_type_channel = {"Plataforma/ERP", "Marketplace", "Meio de Pagamento"};
 
     @FXML
-    private ChoiceBox<String> authentication_type;
+    private ComboBox<String> authentication_type;
 
     private String[] list_type_authentication = {"TOKEN", "LOGIN"};
 
@@ -28,6 +30,11 @@ public class admDefaultChannelRegisterController implements Initializable {
 
     @FXML
     private Button saveButton;
+
+    @FXML
+    private void goToAdmActiveChannels(ActionEvent event) {
+        Main.changeScene("admDefaultChannel");
+    }
 
     @FXML
     private void saveChannelAction(ActionEvent event){

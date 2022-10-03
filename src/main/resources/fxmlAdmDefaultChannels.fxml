@@ -48,7 +48,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button fx:id="buttomAddCanais" mnemonicParsing="false" onAction="#goToRegisterChannel" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Adicionar canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button fx:id="buttomAddCanais" mnemonicParsing="false" onAction="#goToAdmDefaultChannelRegister" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Adicionar canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">

@@ -48,7 +48,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Configuração de canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button mnemonicParsing="false" onAction="#goToUserChannelConfig" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Configuração de canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">
@@ -71,7 +71,7 @@
                      <children>
                         <AnchorPane prefHeight="100.0" prefWidth="870.0">
                            <children>
-                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Configurações ativas" />
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Configurações ativas" AnchorPane.leftAnchor="47.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="450.0" prefWidth="870.0">
@@ -88,7 +88,10 @@
                                  </columnResizePolicy>
                               </TableView>
                               <TextField layoutX="49.0" layoutY="54.0" prefHeight="38.0" prefWidth="262.0" promptText="Pesquisar..." styleClass="searchField" />
-                              <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:" />
+                              <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font></Label>
                            </children>
                         </AnchorPane>
                      </children>
