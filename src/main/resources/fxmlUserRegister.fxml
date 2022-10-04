@@ -116,7 +116,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <Text fill="#ff3e15" layoutX="365.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Já possui uma conta? Entre!" textAlignment="CENTER" underline="true" wrappingWidth="196.08001708984375">
+                              <Text fx:id="text" fill="#ff3e15" layoutX="365.0" layoutY="361.0" onMouseClicked="#backToEnter" strokeType="OUTSIDE" strokeWidth="0.0" text="Já possui uma conta? Entre!" textAlignment="CENTER" underline="true" wrappingWidth="196.08001708984375">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

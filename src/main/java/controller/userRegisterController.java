@@ -1,9 +1,13 @@
 package controller;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import model.ConnectionFactory;
+import view.Main;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,7 +27,12 @@ public class userRegisterController {
     private TextField InputSenha;
     @FXML
     private TextField InputCSenha;
-
+    @FXML
+    private Text text;
+    
+    public void backToEnter(){
+        Main.changeScene("admDefaultChannelRegister");
+    }
     @FXML
     protected void Cadastrar() {
         String Docum, Nome, NomeFanta, Email, Tele, Senha, Csenha;
@@ -34,10 +43,11 @@ public class userRegisterController {
         Tele = InputTele.getText();
         Senha = InputSenha.getText();
         Csenha = InputCSenha.getText();
+
         if(Nome==""){
             Nome = NomeFanta;
         }
-        //if (Senha == Csenha){
+        if (Senha.equals(Csenha)){
             Connection conn;
             PreparedStatement pstm;
             String sql = "insert into users(document,name,email,phone,password) values (?,?,?,?,?)";
@@ -58,12 +68,12 @@ public class userRegisterController {
             } catch (Exception erro) {
                 System.out.println("Cadastro" + erro);
             }
-        /*}else {
+        }else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("As senhas não estão Corretas");
             alert.show();
 
-        }*/
+        }
 
     }
     }
