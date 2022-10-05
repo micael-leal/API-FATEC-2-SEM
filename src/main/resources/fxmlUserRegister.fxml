@@ -92,14 +92,6 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputNFanta" layoutX="40.0" layoutY="184.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome Fantasia" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="180.0">
-                                 <font>
-                                    <Font name="Ubuntu" size="16.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </TextField>
                               <TextField fx:id="InputCSenha" layoutX="338.0" layoutY="184.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Confirmar Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
@@ -108,7 +100,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputEmail" layoutX="40.0" layoutY="224.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="E-mail" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="230.0">
+                              <TextField fx:id="InputEmail" layoutX="40.0" layoutY="180.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="E-mail" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
