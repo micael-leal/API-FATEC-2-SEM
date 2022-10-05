@@ -18,8 +18,6 @@ public class userRegisterController {
     @FXML
     private TextField InputNome;
     @FXML
-    private TextField InputNFanta;
-    @FXML
     private TextField InputEmail;
     @FXML
     private TextField InputTele;
@@ -29,24 +27,20 @@ public class userRegisterController {
     private TextField InputCSenha;
     @FXML
     private Text text;
-    
+
     public void backToEnter(){
         Main.changeScene("admDefaultChannelRegister");
     }
     @FXML
     protected void Cadastrar() {
-        String Docum, Nome, NomeFanta, Email, Tele, Senha, Csenha;
+        String Docum, Nome, Email, Tele, Senha, Csenha;
         Docum = InputDocument.getText();
         Nome = InputNome.getText();
-        NomeFanta = InputNFanta.getText();
         Email = InputEmail.getText();
         Tele = InputTele.getText();
         Senha = InputSenha.getText();
         Csenha = InputCSenha.getText();
-
-        if(Nome==""){
-            Nome = NomeFanta;
-        }
+        
         if (Senha.equals(Csenha)){
             Connection conn;
             PreparedStatement pstm;
