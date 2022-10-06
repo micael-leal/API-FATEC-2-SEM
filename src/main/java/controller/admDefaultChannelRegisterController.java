@@ -3,10 +3,7 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import model.Channel;
 import model.NewChannel;
 import view.Main;
@@ -39,6 +36,11 @@ public class admDefaultChannelRegisterController implements Initializable {
     @FXML
     private void saveChannelAction(ActionEvent event){
         System.out.println("Você clicou!");
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setContentText("OK");
+        alert.show();
+
 
         String type_c = type_channel.getValue();
         String type_a = authentication_type.getValue();
