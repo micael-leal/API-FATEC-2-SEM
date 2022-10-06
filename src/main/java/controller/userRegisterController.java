@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import model.ConnectionFactory;
 import view.Main;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -28,7 +29,7 @@ public class userRegisterController {
     @FXML
     private Text text;
 
-    public void backToEnter(){
+    public void backToEnter() throws IOException {
         Main.changeScene("admDefaultChannelRegister");
     }
     @FXML

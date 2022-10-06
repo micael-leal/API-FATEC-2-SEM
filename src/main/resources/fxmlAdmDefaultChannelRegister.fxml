@@ -32,7 +32,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="50.0" prefWidth="230.0">
                            <children>
-                              <Text layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                              <Text fx:id="userLABEL" layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -51,7 +51,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button fx:id="buttonSair" mnemonicParsing="false" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                              <Button fx:id="buttonSair" mnemonicParsing="false" onAction="#leaveButtonAction" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                                  <styleClass>
                                     <String fx:value="sidebarButtons" />
                                     <String fx:value="logoutButton" />
