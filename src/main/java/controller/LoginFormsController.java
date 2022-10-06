@@ -31,10 +31,6 @@ public class LoginFormsController implements Initializable {
 
         if (email.isBlank() || password.isBlank()) {
             saveMessageButton.setText("Os campos devem ser preenchidos!");
-            System.out.println("Preenchimento obrigatório!");
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setContentText("Preencha todos os campos!");
-//            alert.show();
         }
         else {
             PreparedStatement stmt;
@@ -75,7 +71,7 @@ public class LoginFormsController implements Initializable {
     }
 
     public void createAccountOnAction(ActionEvent actionEvent) {
-        Main.changeScene("userRegisterUser");//alterar para a tela user register - depois.
+        Main.changeScene("userRegisterUser");
     }
 }
 
