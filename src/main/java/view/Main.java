@@ -47,7 +47,7 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(userChannelConfigScreen);
+        primaryStage.setScene(loginFormScreen);
         primaryStage.show();
     }
 
@@ -76,3 +76,7 @@ public class Main extends Application {
 
     public static void main(String[] args) { launch(args); }
 }
+
+// Alert alert = new Alert(Alert.AlertType.CONFIRMATION)
+// alert.setContentText("Confirmar")
+// alert.show()
