@@ -24,7 +24,7 @@
 <br>
 <h1 align="center"><samp>PROPOSTA</samp></h1>
 
-O presente projeto tem por objetivo desenvolver um sistema desktop capaz de armazenar informações cadastrais objetivando a automatização de processos de conciliação financeira.
+O presente projeto tem por objetivo desenvolver um sistema desktop capaz de armazenar informações cadastrais visando a automatização de processos de conciliação financeira.
 
 ### 📖 Requisitos funcionais
 + - [x] Cadastro de canais (marketplaces e meios de pagamentos)
@@ -94,6 +94,11 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
 
 <br>
 <h1 align="center"><samp>PRIMEIRA SPRINT</samp></h1>
+
+![Equipe bytech](/src/main/resources/Burndown_1.png)
+
+<br>
+<h1 align="center"><samp>SEGUNDA SPRINT</samp></h1>
 
 ![Equipe bytech](/src/main/resources/Burndown_1.png)
 

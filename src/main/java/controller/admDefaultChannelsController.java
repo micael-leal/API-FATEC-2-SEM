@@ -7,10 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Text;
 import model.Channel;
 import model.ConnectionFactory;
 import view.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,12 +32,18 @@ public class admDefaultChannelsController implements Initializable {
     private TableColumn<Channel, String> columnTYPE;
     @FXML
     private TableColumn<Channel, String> columnAUTH;
-
+    @FXML
+    private Text userLABEL;
     private final int rowsPerPage = 10;
     private int pages = 1;
 
     @FXML
-    private void goToAdmDefaultChannelRegister(){
+    private void leaveButtonAction() throws IOException {
+        Main.changeScene("loginForm");
+    }
+
+    @FXML
+    private void goToAdmDefaultChannelRegister() throws IOException {
         Main.changeScene("admDefaultChannelRegister");
     }
 
@@ -73,6 +81,7 @@ public class admDefaultChannelsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        userLABEL.setText("Olá, admin");
         columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnCHANNEL.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnTYPE.setCellValueFactory(new PropertyValueFactory<>("type"));
