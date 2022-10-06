@@ -21,18 +21,18 @@
                <children>
                   <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="73.0" prefWidth="230.0">
+                        <AnchorPane prefHeight="100.0" prefWidth="230.0">
                            <children>
-                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="59.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@trackcash_logo_branca.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="62.0" prefWidth="230.0">
+                        <AnchorPane prefHeight="50.0" prefWidth="230.0">
                            <children>
-                              <Text layoutX="76.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                              <Text layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>

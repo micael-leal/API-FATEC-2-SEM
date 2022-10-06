@@ -16,6 +16,7 @@ public class Main extends Application {
     private static Scene admDefaultChannelRegisterScreen;
     private static Scene admDefaultChannelsScreen;
     private static Scene userRegisterUserScreen;
+    private static Scene loginFormScreen;
 
     @Override
     public void start(Stage primaryStage) {
@@ -40,10 +41,13 @@ public class Main extends Application {
             AnchorPane fxmlUserRegisterUser = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlUserRegister.fxml")));
             userRegisterUserScreen = new Scene(fxmlUserRegisterUser);
 
+            AnchorPane fxmlLoginFormScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlLoginForm.fxml")));
+            loginFormScreen = new Scene(fxmlLoginFormScreen);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(userRegisterUserScreen);
+        primaryStage.setScene(userChannelConfigScreen);
         primaryStage.show();
     }
 
@@ -63,6 +67,9 @@ public class Main extends Application {
             }
             case "userRegisterUser" -> {
                 stage.setScene(userRegisterUserScreen);
+            }
+            case "loginForm" -> {
+                stage.setScene(loginFormScreen);
             }
         }
     }

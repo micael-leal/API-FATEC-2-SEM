@@ -21,9 +21,9 @@
                <children>
                   <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="103.0" prefWidth="230.0">
+                        <AnchorPane prefHeight="100.0" prefWidth="230.0">
                            <children>
-                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@trackcash_logo_branca.png" />
                                  </image>
