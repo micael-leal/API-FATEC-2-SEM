@@ -71,7 +71,7 @@ public class LoginFormsController implements Initializable {
     }
 
     public void forgotPasswordOnAction(ActionEvent actionEvent) {
-        Main.changeScene("ChannelRegister");//alterar para a tela de req senha!!!!
+        Main.changeScene("forgotPassword");
     }
 
     public void createAccountOnAction(ActionEvent actionEvent) {
