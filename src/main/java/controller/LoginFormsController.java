@@ -24,16 +24,13 @@ public class LoginFormsController implements Initializable {
     @FXML
     private Label saveMessageButton;
 
+    @FXML
     public void loginButton(ActionEvent event) {
         String email = emailInputField.getText();
         String password = passwordInputField.getText();
 
         if (email.isBlank() || password.isBlank()) {
             saveMessageButton.setText("Os campos devem ser preenchidos!");
-            System.out.println("Preenchimento obrigatório!");
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setContentText("Preencha todos os campos!");
-//            alert.show();
         }
         else {
             PreparedStatement stmt;
@@ -46,8 +43,8 @@ public class LoginFormsController implements Initializable {
                 stmt.setString(2, password);
                 resultSet = stmt.executeQuery();
 
-                if (resultSet.isBeforeFirst()) {
-                    User usuarioLogado = new User();
+                if (resultSet.next()) {
+                    User usuarioLogado = User.getInstance();
                     usuarioLogado.setId(resultSet.getInt("user_id"));
                     usuarioLogado.setName(resultSet.getString("name"));
                     usuarioLogado.setEmail(resultSet.getString("email"));
@@ -55,7 +52,6 @@ public class LoginFormsController implements Initializable {
                     usuarioLogado.setPassword(resultSet.getString("phone"));
                     usuarioLogado.setDocument(resultSet.getString("document"));
                     usuarioLogado.setType(resultSet.getInt("type_adm"));
-
                     Main.changeScene("userActiveConfig");
                 } else {
                     saveMessageButton.setText("Essa combinação de e-mail e senha está incorreta.");
@@ -75,7 +71,7 @@ public class LoginFormsController implements Initializable {
     }
 
     public void createAccountOnAction(ActionEvent actionEvent) {
-        Main.changeScene("userRegisterUser");//alterar para a tela user register - depois.
+        Main.changeScene("userRegisterUser");
     }
 }
 
