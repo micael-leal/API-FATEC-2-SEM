@@ -83,3 +83,7 @@ public class Main extends Application {
 
     public static void main(String[] args) { launch(args); }
 }
+
+// Alert alert = new Alert(Alert.AlertType.CONFIRMATION)
+// alert.setContentText("Confirmar")
+// alert.show()

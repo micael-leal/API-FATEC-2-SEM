@@ -102,13 +102,25 @@ public class userChannelConfigController implements Initializable {
             choiceCHANNEL.getItems().addAll(channelList);
 
             buttonSAVE.setOnAction(actionEvent -> {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setContentText("OK");
+                alert.show();
+
+                /*
                 if(selectedType.equals("TOKEN")) {
                     //conn.prepareStatement("INSERT INTO registeredChannelToken (user_id, channel_id, token) VALUES (?, ?, ?)");
                     //TODO: Para continuar com a lógica, vai ser necessário o sistema de log-in
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setContentText("OK");
+                    alert.show();
                 } else {
                     //conn.prepareStatement("INSERT INTO registeredChannelLogin (user_id, channel_id, login, password) VALUES (?, ?, ?, ?)");
                     //TODO: Para continuar com a lógica, vai ser necessário o sistema de log-in
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setContentText("OK");
+                    alert.show();
                 }
+                 */
             });
         } catch (Exception e) {
             throw new RuntimeException(e);
