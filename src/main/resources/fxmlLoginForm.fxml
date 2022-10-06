@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormsController">
+    <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                    <VBox prefHeight="550.0" prefWidth="550.0">
+                        <children>
+                        <AnchorPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="48.0" fitWidth="153.0" layoutX="35.0" layoutY="11.0">
+                                 <image>
+                                    <Image url="@trackcash_logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="562.0" prefWidth="1100.0" style="-fx-background-color: FFFFFF;">
+                                <children>
+                                    <Text fill="#ff3e15" layoutX="140.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Entre no TrackCash" textAlignment="CENTER" wrappingWidth="270.0" AnchorPane.bottomAnchor="354.283203125" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="103.435546875">
+                                        <font>
+                                            <Font name="System Bold" size="22.0" />
+                                        </font>
+                                    </Text>
+                                    <TextField fx:id="emailInputField" layoutX="145.0" layoutY="161.0" prefHeight="38.0" prefWidth="270.0" promptText="E-mail" styleClass="searchField" AnchorPane.leftAnchor="145.0">
+                                        <font>
+                                            <Font name="Ubuntu" size="14.0" />
+                                        </font>
+                                    </TextField>
+                                    <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="306.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Acessar o Sistema">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Hyperlink fx:id="forgotPassword" layoutX="298.0" layoutY="271.0" onAction="#forgotPasswordOnAction" text="Esqueceu a senha?" textFill="#ff3e15">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink fx:id="createAccount" layoutX="176.0" layoutY="362.0" onAction="#createAccountOnAction" text="Não possui uma conta? Cadastre-se" textFill="#ff3e15">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Label fx:id="saveMessageButton" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="136.0" prefHeight="17.0" prefWidth="270.0" textAlignment="RIGHT" textFill="RED">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="passwordInputField" layoutX="145.0" layoutY="215.0" prefHeight="17.0" prefWidth="270.0" promptText="Senha" styleClass="searchField" />
+                           </children>
+                            </AnchorPane>
+                        </children>
+                    </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="550.0" fitWidth="550.0">
+                     <image>
+                        <Image url="@bg_login_1.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: FF3E15; -fx-opacity: .7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Text fill="WHITE" layoutX="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro" textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="170.0">
+                     <font>
+                        <Font name="Ubuntu Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="135.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces e Meios de Pagamento!" textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="260.0">
+                     <font>
+                        <Font name="Ubuntu" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
