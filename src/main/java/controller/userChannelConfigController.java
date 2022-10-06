@@ -7,9 +7,11 @@ import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import model.*;
 import view.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,11 +24,11 @@ public class userChannelConfigController implements Initializable {
     @FXML
     private ComboBox<String> choiceCHANNEL;
     @FXML
-    private TextField fieldCHANNELID;
-    @FXML
     private VBox dynamicVBox;
     @FXML
     private Button buttonSAVE;
+    @FXML
+    private Text userLABEL;
     private final ArrayList<String> channelList = new ArrayList<>();
     private String selectedType;
     private String token = "";
@@ -34,7 +36,13 @@ public class userChannelConfigController implements Initializable {
     private String senha = "";
 
     @FXML
-    private void goToUserActiveChannels() {
+    private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
+        Main.changeScene("loginForm");
+    }
+
+    @FXML
+    private void goToUserActiveChannels() throws IOException {
         Main.changeScene("userActiveConfig");
     }
 
@@ -99,6 +107,7 @@ public class userChannelConfigController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        userLABEL.setText("Olá, " + User.getInstance().getName());
         try {
             Connection conn = ConnectionFactory.getConnection();
             ResultSet resultSet = conn.createStatement().executeQuery("SELECT name FROM defaultChannels");

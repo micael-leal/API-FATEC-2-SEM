@@ -4,10 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import model.Channel;
 import model.NewChannel;
+import model.User;
 import view.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,39 +29,41 @@ public class admDefaultChannelRegisterController implements Initializable {
     private TextField channel_input_field;
 
     @FXML
-    private Button saveButton;
+    private Text userLABEL;
 
     @FXML
-    private void goToAdmActiveChannels(ActionEvent event) {
+    private void leaveButtonAction() throws IOException {
+        Main.changeScene("loginForm");
+    }
+
+    @FXML
+    private void goToAdmActiveChannels(ActionEvent event) throws IOException {
         Main.changeScene("admDefaultChannel");
     }
 
     @FXML
     private void saveChannelAction(ActionEvent event){
-        System.out.println("Você clicou!");
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText("OK");
-        alert.show();
-
-
         String type_c = type_channel.getValue();
         String type_a = authentication_type.getValue();
         String channel_name = channel_input_field.getText();
 
         Channel channel = new Channel(
-        0,
-        channel_name,
-        type_c,
-        type_a
+            0,
+            channel_name,
+            type_c,
+            type_a
         );
 
         NewChannel newChannel = new NewChannel();
         newChannel.addChannel(channel);
+        channel_input_field.setText("");
+        authentication_type.valueProperty().set(null);
+        type_channel.valueProperty().set(null);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        userLABEL.setText("Olá, admin");
         type_channel.getItems().addAll(list_type_channel);
         authentication_type.getItems().addAll(list_type_authentication);
     }

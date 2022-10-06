@@ -10,6 +10,7 @@ import javafx.scene.layout.Pane;
 import model.ForgotPassword;
 import view.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -68,7 +69,7 @@ public class ForgotPasswordController implements Initializable {
     }
 
     @FXML
-    public void tradeAction(ActionEvent event) {
+    public void tradeAction(ActionEvent event) throws IOException {
         if (newPasswordField.getText().equals(newConfirmField.getText())) {
             forgot.passwordUpdate(newPasswordField.getText());
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -85,8 +86,11 @@ public class ForgotPasswordController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         returnButton.setOnAction(actionEvent -> {
-            Main.changeScene("loginForm");
-        }
-        );
+            try {
+                Main.changeScene("loginForm");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }

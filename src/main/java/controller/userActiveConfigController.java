@@ -9,10 +9,13 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 import model.ConnectionFactory;
 import model.RegisteredChannel;
+import model.User;
 import view.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,12 +35,20 @@ public class userActiveConfigController implements Initializable {
     private TableColumn<RegisteredChannel, String> columnCHANNEL;
     @FXML
     private TableColumn<RegisteredChannel, String> columnACTION;
+    @FXML
+    private Text userLABEL;
 
     private final int rowsPerPage = 10;
     private int pages = 1;
 
     @FXML
-    private void goToUserChannelConfig() {
+    private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
+        Main.changeScene("loginForm");
+    }
+
+    @FXML
+    private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
     }
 
@@ -49,7 +60,10 @@ public class userActiveConfigController implements Initializable {
         ObservableList<RegisteredChannel> registeredChannelList = FXCollections.observableArrayList();
 
         try {
-            stmt = conn.prepareStatement("SELECT registeredChannelToken.*, defaultChannels.name FROM registeredChannelToken INNER JOIN defaultChannels ON registeredChannelToken.channel_id=defaultChannels.channel_id AND registeredChannelToken.user_id=1");
+            int usuarioLogado = User.getInstance().getId();
+            stmt = conn.prepareStatement("SELECT registeredChannelToken.channel_id, registeredChannelToken.user_id, registeredChannelToken.registeredChannelToken_id, defaultChannels.name FROM registeredChannelToken INNER JOIN defaultChannels ON registeredChannelToken.channel_id=defaultChannels.channel_id AND registeredChannelToken.user_id=(?) UNION SELECT registeredChannelLogin.channel_id, registeredChannelLogin.user_id, registeredChannelLogin.registeredChannelLogin_id, defaultChannels.name FROM registeredChannelLogin INNER JOIN defaultChannels ON registeredChannelLogin.channel_id=defaultChannels.channel_id AND registeredChannelLogin.user_id=(?)");
+            stmt.setInt(1, usuarioLogado);
+            stmt.setInt(2, usuarioLogado);
             resultSet = stmt.executeQuery();
             while (resultSet.next()) {
                 registeredChannelList.add(new RegisteredChannel(
@@ -57,7 +71,7 @@ public class userActiveConfigController implements Initializable {
                         resultSet.getInt("user_id"),
                         resultSet.getInt("channel_id"),
                         resultSet.getString("name"),
-                        resultSet.getString("token"),
+                        "null",
                         "null",
                         "null"
                 ));
@@ -141,6 +155,7 @@ public class userActiveConfigController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        userLABEL.setText("Olá, " + User.getInstance().getName());
         updateTable();
     }
 }
