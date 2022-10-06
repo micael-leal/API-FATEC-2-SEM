@@ -24,6 +24,7 @@ public class LoginFormsController implements Initializable {
     @FXML
     private Label saveMessageButton;
 
+    @FXML
     public void loginButton(ActionEvent event) {
         String email = emailInputField.getText();
         String password = passwordInputField.getText();
@@ -46,8 +47,8 @@ public class LoginFormsController implements Initializable {
                 stmt.setString(2, password);
                 resultSet = stmt.executeQuery();
 
-                if (resultSet.isBeforeFirst()) {
-                    User usuarioLogado = new User();
+                if (resultSet.next()) {
+                    User usuarioLogado = User.getInstance();
                     usuarioLogado.setId(resultSet.getInt("user_id"));
                     usuarioLogado.setName(resultSet.getString("name"));
                     usuarioLogado.setEmail(resultSet.getString("email"));
@@ -55,7 +56,6 @@ public class LoginFormsController implements Initializable {
                     usuarioLogado.setPassword(resultSet.getString("phone"));
                     usuarioLogado.setDocument(resultSet.getString("document"));
                     usuarioLogado.setType(resultSet.getInt("type_adm"));
-
                     Main.changeScene("userActiveConfig");
                 } else {
                     saveMessageButton.setText("Essa combinação de e-mail e senha está incorreta.");

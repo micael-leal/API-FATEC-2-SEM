@@ -92,8 +92,6 @@ public class userChannelConfigController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            User usuarioLogado = User.getInstance();
-            System.out.println(usuarioLogado.getEmail());
             Connection conn = ConnectionFactory.getConnection();
             PreparedStatement stmt;
             ResultSet resultSet = conn.createStatement().executeQuery("SELECT name FROM defaultChannels");

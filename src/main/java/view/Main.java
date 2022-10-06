@@ -47,7 +47,7 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(userChannelConfigScreen);
+        primaryStage.setScene(loginFormScreen);
         primaryStage.show();
     }
 
