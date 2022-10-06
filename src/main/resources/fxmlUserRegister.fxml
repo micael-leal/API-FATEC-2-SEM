@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,7 +19,7 @@
          <children>
             <AnchorPane prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #F9FAFB;">
                <children>
-                  <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0">
+                  <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
                      <image>
                         <Image url="@trackcash_logo.png" />
                      </image>
@@ -29,10 +30,13 @@
                <children>
                   <HBox prefHeight="483.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="483.0" prefWidth="433.0">
+                        <AnchorPane prefHeight="483.0" prefWidth="420.0">
                            <children>
-                              <ImageView fitHeight="483.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                              <Pane layoutX="89.0" layoutY="35.0" prefHeight="400.0" prefWidth="240.0" style="-fx-background-color: FF3E15; -fx-opacity: .8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <ImageView fitHeight="483.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@bg_login_1.png" />
+                                 </image></ImageView>
+                              <Pane prefHeight="483.0" prefWidth="420.0" style="-fx-background-color: FF3E15; -fx-opacity: .8;">
                                  <children>
                                     <Text fill="WHITE" layoutX="74.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro!" textAlignment="CENTER" wrappingWidth="281.0">
                                        <font>
@@ -108,11 +112,11 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <Text fx:id="text" fill="#ff3e15" layoutX="365.0" layoutY="361.0" onMouseClicked="#backToEnter" strokeType="OUTSIDE" strokeWidth="0.0" text="Já possui uma conta? Entre!" textAlignment="CENTER" underline="true" wrappingWidth="196.08001708984375">
+                              <Hyperlink fx:id="enterUser" layoutX="393.0" layoutY="344.0" onAction="#enterUserOnAction" text="Já possui uma conta? Entre!" textFill="#ff3e15">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="Ubuntu" size="13.0" />
                                  </font>
-                              </Text>
+                              </Hyperlink>
                            </children>
                         </AnchorPane>
                      </children>
