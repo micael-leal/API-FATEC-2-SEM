@@ -26,7 +26,9 @@ public class userChannelConfigController implements Initializable {
     @FXML
     private VBox dynamicVBox;
     @FXML
+    private Button buttonSAVE;
     private final ArrayList<String> channelList = new ArrayList<>();
+    private String selectedType;
 
     @FXML
     private void goToUserActiveChannels() {
@@ -46,6 +48,7 @@ public class userChannelConfigController implements Initializable {
             result.next();
 
             if (result.getString("auth").equals("TOKEN")) {
+                selectedType = "TOKEN";
                 dynamicVBox.getChildren().clear();
                 TextField tokenField = new TextField();
                 Label tokenLabel = new Label("Insira o token:");
@@ -57,6 +60,7 @@ public class userChannelConfigController implements Initializable {
                 dynamicVBox.setPadding(new Insets(0, 0, 0, 47));
                 dynamicVBox.getChildren().addAll(tokenLabel, tokenField);
             } else {
+                selectedType = "LOGIN";
                 dynamicVBox.getChildren().clear();
                 HBox container = new HBox();
                 VBox field1 = new VBox();
@@ -79,6 +83,7 @@ public class userChannelConfigController implements Initializable {
                 dynamicVBox.setPadding(new Insets(0, 0, 0, 47));
                 dynamicVBox.getChildren().addAll(container);
             }
+            conn.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -87,6 +92,30 @@ public class userChannelConfigController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            User usuarioLogado = User.getInstance();
+            System.out.println(usuarioLogado.getEmail());
+            Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt;
+            ResultSet resultSet = conn.createStatement().executeQuery("SELECT name FROM defaultChannels");
+
+            while (resultSet.next()) {
+                channelList.add(resultSet.getString("name"));
+            }
+            choiceCHANNEL.getItems().addAll(channelList);
+
+            buttonSAVE.setOnAction(actionEvent -> {
+                if(selectedType.equals("TOKEN")) {
+                    //conn.prepareStatement("INSERT INTO registeredChannelToken (user_id, channel_id, token) VALUES (?, ?, ?)");
+                    //TODO: Para continuar com a lógica, vai ser necessário o sistema de log-in
+                } else {
+                    //conn.prepareStatement("INSERT INTO registeredChannelLogin (user_id, channel_id, login, password) VALUES (?, ?, ?, ?)");
+                    //TODO: Para continuar com a lógica, vai ser necessário o sistema de log-in
+                }
+            });
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        /*try {
             Connection conn;
             conn = ConnectionFactory.getConnection();
             ResultSet resultSet = conn.createStatement().executeQuery("SELECT name FROM defaultChannels");
@@ -97,6 +126,6 @@ public class userChannelConfigController implements Initializable {
             choiceCHANNEL.getItems().addAll(channelList);
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        }*/
     }
 }

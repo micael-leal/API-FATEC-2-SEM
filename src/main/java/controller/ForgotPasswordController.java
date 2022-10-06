@@ -74,7 +74,7 @@ public class ForgotPasswordController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Senha alterada com sucesso!");
             alert.show();
-            Main.changeScene("userRegisterUser");
+            Main.changeScene("loginForm");
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("A senha deve ser igual a sua confirmação!");
@@ -85,7 +85,7 @@ public class ForgotPasswordController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         returnButton.setOnAction(actionEvent -> {
-            Main.changeScene("userRegisterUser");
+            Main.changeScene("loginForm");
         }
         );
     }
