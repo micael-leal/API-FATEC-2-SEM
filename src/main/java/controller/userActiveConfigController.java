@@ -99,7 +99,7 @@ public class userActiveConfigController implements Initializable {
 //                    });
                     deleteButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
-                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setContentText("[DELETE] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
                         Optional<ButtonType> result = alert.showAndWait();
 
@@ -110,9 +110,13 @@ public class userActiveConfigController implements Initializable {
                             try {
                                 stmt = conn.prepareStatement("delete from registeredChannelToken where registeredChannelToken_id = (?)");
                                 stmt.setInt(1, rc.getId());
-                                stmt.execute();
+                                /* stmt.execute(); */
                                 conn.close();
                                 updateTable();
+
+                                alert = new Alert(Alert.AlertType.CONFIRMATION);
+                                alert.setContentText("OK");
+                                alert.show();
                             } catch (SQLException e) {
                                 throw new RuntimeException(e);
                             }
