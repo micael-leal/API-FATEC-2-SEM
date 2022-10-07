@@ -124,7 +124,7 @@ public class userActiveConfigController implements Initializable {
                             try {
                                 stmt = conn.prepareStatement("delete from registeredChannelToken where registeredChannelToken_id = (?)");
                                 stmt.setInt(1, rc.getId());
-                                /* stmt.execute(); */
+                                stmt.execute();
                                 conn.close();
                                 updateTable();
 
