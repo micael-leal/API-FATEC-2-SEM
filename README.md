@@ -100,7 +100,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
 <br>
 <h1 align="center"><samp>SEGUNDA SPRINT</samp></h1>
 
-![Equipe bytech](/src/main/resources/Burndown_1.png)
+![Equipe bytech](/src/main/resources/Burndown_2.png)
 
 <br>
 <h1 align="center"><samp>DETALHES DAS SPRINTS</samp></h1>
