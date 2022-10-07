@@ -134,7 +134,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <p align="center">
     <img src=" /src/main/resources/Config_ativas.gif " width="65%" />
   </p>
-  <p align="justify">Demonstração da tela de configurações ativas. Esta interface contempla todas as configurações já realizadas e oferece para o cliente a opção de consulta e edição (p.ex. Editar e Deletar) dos canais já cadastrados.</p>
+  <p align="justify">Demonstração da tela de configurações ativas. Esta interface contempla todas as configurações já realizadas e oferece para o cliente a opção de consulta e edição (p.ex. Editar) dos canais já cadastrados.</p>
   
 <br>
   <h3 align="center">Modelo de dados relacional</h3>
@@ -150,13 +150,49 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
     <img src="/src/main/resources/apiTrackCashERDiagrama.png" width="65%" />
   </p>
   <p align="justify">O modelo de dados lógico é caracterizado pelas entidades: <i>defaultChannels</i>; <i>users</i>; <i>registeredChannelLogin</i>; <i>registeredChannelToken</i>. A entidade <i>defaultChannels</i> contêm os seguintes atributos: <i>channel_id</i> (chave primária) do tipo inteiro, <i>name</i> do tipo baseado em caracteres, <i>type</i> do tipo caracteres; e <i>auth</i> baseado em carateres. A entidade <i>users</i> abriga os atributos: <i>user_id</i> (chave primária) do tipo inteiro, <i>name</i> do tipo baseado em caracteres, <i>email</i> do tipo baseado em caracteres, <i>password</i> do tipo baseado em caracteres, <i>phone</i> do tipo baseado em inteiro, <i>document</i> do tipo baseado em caracteres e <i>type_adm</i> do tipo baseado em caracteres. A entidade <i>registeredChannelLogin</i> contêm informações dos canais do tipo de autenticação usuário/senha, sendo o atributo <i>registeredChannelLogin_id</i> a chave primária do tipo inteiro; <i>login</i> do tipo baseado em caracteres; <i>password</i> do tipo baseado em caracteres; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>. Por fim, <i>registeredChannelToken</i> contempla o tipo de autenticação token, na qual o atributo <i>registeredChannelToken_id</i> a chave primária do tipo inteiro; <i>token</i> do tipo inteiro; <i>user_id</i> chave estrangeira da tabela <i>users</i>; e <i>channel_id</i> chave estrangeira da tabela <i>defaultChannels</i>.</p>
-    <p align="justify">As relações entre as entidades são:</p>
+    <p align="justify">As relações entre as entidades são todas do tipo <b>1:N</b>, onde:</p>
     <ul>
-      <li align="justify"><b>1:N</b> - <i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
-      <li align="justify"><b>1:N</b> - <i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
-      <li align="justify"><b>1:N</b> - <i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
-      <li align="justify"><b>1:N</b> - <i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
+      <li align="justify"><i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
+      <li align="justify"><i>defaultChannels</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>defaultChannels</i></li>
+      <li align="justify"><i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelToken</i>, mas <i>registeredChannelToken</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
+      <li align="justify"><i>users</i> se associa a muitas ocorrências da entidade <i>registeredChannelLogin</i>, mas <i>registeredChannelLogin</i> pode se associar a uma ocorrência da entidade <i>users</i></li>
     </ul>
+</details>
+
+<h2>Sprint 2</h2>
+<details>
+  <summary>Detalhes</summary>
+  <br>
+    <p align="justify">De forma geral, o objetivo desta sprint foi completar o sistema com mais algumas telas (p. ex. entrar, recuperar senha, cadastrar e configuração de canal). Além disso, efetuamos a padronização dos <i>layouts</i> de todas as telas; adicionamos a <i>side bar</i> com o intuito de melhorar a usabilidade do software. Por último, implementamos um aperfeiçoamento na navegação entre as telas para garantir maior fluidez ao programa.</p>
+  <br>
+  <h3 align="center">Demonstração de usabilidade</h3>
+   <br>
+  <h4 align="center">Tela Entrar<br><a href="https://www.youtube.com/watch?v=UtJIXQ2DS-o">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Cadastro_canais_adm.gif " width="65%" />
+  </p>
+  <p align="justify">Demonstração da aplicação da tela entrar. Esta interface contempla as funcionalidades acessar, recuperar senha e cadastar. Ao executarmos com sucesso o botão "Acessar o sistema" ocorrerá o redirecinamento para a tela cadastro de canais. Nessa interface ocorrem as opções canais ativos e configurações de canais. Dentro de canais ativos estão disponíveis as seguintes informações: id, canal e ações (botão deletar para remover alguma configuração não necessária). Ressalta-se também, a paginação objetivando uma melhor visualização de todos os dados.</p>
+  
+ <br>
+  <h4 align="center">Tela de Configurações de Canais – Usuário e Senha <br><a href="https://www.youtube.com/watch?v=s-h25q8byrY">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_canais_user.gif " width="65%" />
+  </p>
+   <p align="justify">A interface configurações de canais possibilita a validação da inserção das informações no banco de dados - visualmente representado pelo botão "Salvar". Além disso, temos duas opções de canal: usuário/senha e token.</p>
+  
+ <br>
+  <h4 align="center">Tela de Recuperação de Senha <br><a href="https://www.youtube.com/watch?v=Ayp1KyIrV_s">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_canais_token.gif " width="65%" />
+  </p>
+  <p align="justify">Demonstração da tela de recuperação de senha. Esta interface visa a recuperação da conta através da inserção do e-mail cadastrado.</p>
+
+<br>
+  <h4 align="center">Tela Cadastrar Conta<br><a href="https://www.youtube.com/watch?v=PDNR33mpV70">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/Config_ativas.gif " width="65%" />
+  </p>
+  <p align="justify">A tela cadastrar envolve duas versões: uma voltada para o usuário e outra para o administrador. Nesta interface serão mostrados todos os canais já cadastrados, nela será também possível adicionais canais e configurá-los. Por fim, dastaca-se os alertas desenvolvidos para validar todas as ações do usuário e do administrador.</p>
 </details>
   
 <br>
