@@ -15,11 +15,11 @@
 
 <AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userRegisterController">
    <children>
-      <VBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="550.0" prefWidth="1100.0">
          <children>
-            <AnchorPane prefHeight="100.0" prefWidth="1100.0" style="-fx-background-color: #F9FAFB;">
+            <AnchorPane prefHeight="100.0" prefWidth="709.0">
                <children>
-                  <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+                  <ImageView fitHeight="54.0" fitWidth="156.0" layoutX="509.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="510.0">
                      <image>
                         <Image url="@trackcash_logo.png" />
                      </image>
@@ -32,18 +32,18 @@
                      <children>
                         <AnchorPane prefHeight="483.0" prefWidth="420.0">
                            <children>
-                              <ImageView fitHeight="483.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="562.0" fitWidth="478.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@bg_login_1.png" />
                                  </image></ImageView>
-                              <Pane prefHeight="483.0" prefWidth="420.0" style="-fx-background-color: FF3E15; -fx-opacity: .8;">
+                              <Pane layoutY="-67.0" prefHeight="550.0" prefWidth="478.0" style="-fx-background-color: FF3E15; -fx-opacity: .8;" AnchorPane.leftAnchor="0.0">
                                  <children>
-                                    <Text fill="WHITE" layoutX="74.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro!" textAlignment="CENTER" wrappingWidth="281.0">
+                                    <Text fill="WHITE" layoutX="99.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro!" textAlignment="CENTER" wrappingWidth="281.0">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="WHITE" layoutX="74.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces, Transportadoras, Meios de Pagamento e Instituições Financeiras" textAlignment="CENTER" wrappingWidth="281.0">
+                                    <Text fill="WHITE" layoutX="99.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces, Transportadoras, Meios de Pagamento e Instituições Financeiras" textAlignment="CENTER" wrappingWidth="281.0">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -64,7 +64,7 @@
                                     <Font size="16.0" />
                                  </font>
                               </Button>
-                              <TextField fx:id="InputNome" layoutX="40.0" layoutY="130.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="130.0">
+                              <TextField fx:id="InputNome" layoutX="39.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="175.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -72,7 +72,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputSenha" layoutX="338.0" layoutY="130.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="130.0">
+                              <TextField fx:id="InputSenha" layoutX="337.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="175.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -80,7 +80,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputDocument" layoutX="40.0" layoutY="78.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="CPF/CNPJ" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="80.0">
+                              <TextField fx:id="InputDocument" layoutX="36.0" layoutY="113.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="CPF/CNPJ" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="113.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -88,7 +88,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputTele" layoutX="338.0" layoutY="78.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Telefone(Com DDD)" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="80.0">
+                              <TextField fx:id="InputTele" layoutX="334.0" layoutY="113.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Telefone(Com DDD)" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="113.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -96,7 +96,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputCSenha" layoutX="338.0" layoutY="184.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Confirmar Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="180.0">
+                              <TextField fx:id="InputCSenha" layoutX="334.0" layoutY="236.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Confirmar Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="236.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -104,7 +104,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputEmail" layoutX="40.0" layoutY="180.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="E-mail" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="180.0">
+                              <TextField fx:id="InputEmail" layoutX="36.0" layoutY="236.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="E-mail" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="236.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
