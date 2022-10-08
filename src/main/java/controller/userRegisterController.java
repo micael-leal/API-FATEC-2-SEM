@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import model.ConnectionFactory;
 import view.Main;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -25,11 +26,9 @@ public class userRegisterController {
     private TextField InputSenha;
     @FXML
     private TextField InputCSenha;
-    @FXML
-    private Text text;
 
-    public void backToEnter(){
-        Main.changeScene("admDefaultChannelRegister");
+    public void enterUserOnAction() throws IOException {
+        Main.changeScene("loginForm");
     }
     @FXML
     protected void Cadastrar() {
@@ -40,7 +39,7 @@ public class userRegisterController {
         Tele = InputTele.getText();
         Senha = InputSenha.getText();
         Csenha = InputCSenha.getText();
-        
+
         if (Senha.equals(Csenha)){
             Connection conn;
             PreparedStatement pstm;
@@ -59,6 +58,7 @@ public class userRegisterController {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("Cadastro Feito");
                 alert.show();
+                Main.changeScene("loginForm");
             } catch (Exception erro) {
                 System.out.println("Cadastro" + erro);
             }
