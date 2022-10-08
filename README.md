@@ -167,35 +167,35 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <br>
   <h3 align="center">Demonstração de usabilidade</h3>
    <br>
-  <h4 align="center">Tela Entrar<br><a href="https://www.youtube.com/watch?v=UtJIXQ2DS-o">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Tela Entrar<br><a href="https://youtu.be/vRlapvbhVxI">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-entrar-configuracoes-ativas.gif " width="65%" />
   </p>
   <p align="justify">Demonstração da aplicação da tela entrar. Esta interface contempla as funcionalidades acessar, recuperar senha e cadastar. Ao executarmos com sucesso o botão "Acessar o sistema" ocorrerá o redirecinamento para a tela cadastro de canais. Nessa interface ocorrem as opções canais ativos e configurações de canais. Dentro de canais ativos estão disponíveis as seguintes informações: id, canal e ações (botão deletar para remover alguma configuração não necessária). Ressalta-se também, a paginação objetivando uma melhor visualização de todos os dados.</p>
   
  <br>
-  <h4 align="center">Tela de Configurações de Canais – Usuário e Senha <br><a href="https://www.youtube.com/watch?v=s-h25q8byrY">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Tela de Configurações de Canais – Usuário e Senha <br><a href="https://youtu.be/sJAp-t41iLQ">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-configuracao-canais.gif " width="65%" />
   </p>
    <p align="justify">A interface configurações de canais possibilita a validação da inserção das informações no banco de dados - visualmente representado pelo botão "Salvar". Além disso, temos duas opções de canal: usuário/senha e token.</p>
   
  <br>
-  <h4 align="center">Tela de Recuperação de Senha <br><a href="https://www.youtube.com/watch?v=Ayp1KyIrV_s">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Tela de Recuperação de Senha <br><a href="https://www.youtube.com/LBvcM7xHmCU">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-recuperacao-senha.gif " width="65%" />
   </p>
   <p align="justify">Demonstração da tela de recuperação de senha. Esta interface visa a recuperação da conta através da inserção do e-mail cadastrado.</p>
 
 <br>
-  <h4 align="center">Tela Cadastrar Conta<br><a href="https://www.youtube.com/watch?v=PDNR33mpV70">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Tela Cadastrar Conta<br><a href="https://youtu.be/GEeLuXjSxX8">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-criacao-conta.gif " width="65%" />
   </p>
   <p align="justify">A tela cadastrar envolve duas versões: uma voltada para o usuário e outra para o administrador. Nesta interface serão mostrados todos os canais já cadastrados, nela será também possível adicionais canais e configurá-los. Por fim, dastaca-se os alertas desenvolvidos para validar todas as ações do usuário e do administrador.</p>
 
 <br>
-  <h4 align="center">Interface de administrador<br><a href="https://www.youtube.com/watch?v=PDNR33mpV70">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Interface de administrador<br><a href="https://youtu.be/d7oNc1hfFGw">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-administrador.gif " width="65%" />
   </p>
