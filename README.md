@@ -181,7 +181,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
    <p align="justify">A interface configurações de canais possibilita a validação da inserção das informações no banco de dados - visualmente representado pelo botão "Salvar". Além disso, temos duas opções de canal: usuário/senha e token.</p>
   
  <br>
-  <h4 align="center">Tela de Recuperação de Senha <br><a href="https://www.youtube.com/LBvcM7xHmCU">Youtube (Qualidade melhor)</a></h4>
+  <h4 align="center">Tela de Recuperação de Senha <br><a href="https://youtu.be/LBvcM7xHmCU">Youtube (Qualidade melhor)</a></h4>
   <p align="center">
     <img src=" /src/main/resources/tela-recuperacao-senha.gif " width="65%" />
   </p>
