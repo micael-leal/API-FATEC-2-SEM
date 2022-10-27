@@ -10,7 +10,7 @@ public class User {
     private String document;
     private int type;
 
-    public User() {}
+    private User() {}
 
     public static User getInstance() {
         if (instance == null)
