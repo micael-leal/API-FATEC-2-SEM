@@ -88,7 +88,7 @@
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                  </columnResizePolicy>
                               </TableView>
-                              <TextField layoutX="49.0" layoutY="54.0" prefHeight="38.0" prefWidth="262.0" promptText="Pesquisar..." styleClass="searchField" />
+                              <TextField fx:id="searchField" layoutX="49.0" layoutY="54.0" prefHeight="38.0" prefWidth="262.0" promptText="Pesquisar..." styleClass="searchField" />
                               <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
