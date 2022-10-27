@@ -58,6 +58,11 @@ public class Main extends Application {
                 Scene forgotPasswordScreen = new Scene(fxmlForgotPassword);
                 stage.setScene(forgotPasswordScreen);
             }
+            case "userProfile" -> {
+                AnchorPane fxmlUserProfile = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlUserProfile.fxml")));
+                Scene userProfile = new Scene(fxmlUserProfile);
+                stage.setScene(userProfile);
+            }
             case "loginForm" -> {
                 stage.setScene(loginFormScreen);
             }

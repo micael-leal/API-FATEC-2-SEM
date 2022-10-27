@@ -48,6 +48,11 @@
                               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Configuração de canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="profileButton" mnemonicParsing="false" onAction="#goToProfileChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Perfil" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
                            <children>
                               <Button mnemonicParsing="false" onAction="#leaveButtonAction" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">

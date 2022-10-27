@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -42,9 +43,17 @@ public class userChannelConfigController implements Initializable {
     }
 
     @FXML
-    private void goToUserActiveChannels() throws IOException {
-        Main.changeScene("userActiveConfig");
+    public void goToProfileChannels(ActionEvent event) throws IOException{
+        Main.changeScene("userProfile");
     }
+
+    public void goToUserActiveChannels(ActionEvent event) {
+    }
+//    @FXML
+//    private void goToUserActiveChannels() throws IOException {
+//        Main.changeScene("userProfile");
+
+//    }
 
     @FXML
     public void changeContent() {
@@ -167,4 +176,5 @@ public class userChannelConfigController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
 }

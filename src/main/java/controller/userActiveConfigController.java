@@ -2,6 +2,7 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -50,9 +51,20 @@ public class userActiveConfigController implements Initializable {
     }
 
     @FXML
+    private void goToProfileChannels() throws IOException {
+        Main.changeScene("userProfile");
+    }
+
+    @FXML
     private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
     }
+
+    @FXML
+    public void goToProfileChannels(ActionEvent event) throws IOException{
+        Main.changeScene("userProfile");
+    }
+
 
     private ObservableList<RegisteredChannel> getRegisteredChannelData() {
         PreparedStatement stmt;
