@@ -66,6 +66,17 @@ public class Main extends Application {
             case "loginForm" -> {
                 stage.setScene(loginFormScreen);
             }
+            case "admCreateAccount" -> {
+                AnchorPane fxmlAdmCreateAccountController = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlAdmCreateAccountController.fxml")));
+                Scene admCreateAccountScreen = new Scene(fxmlAdmCreateAccountController);
+                stage.setScene(admCreateAccountScreen);
+            }
+
+            case "profileHandler" -> {
+                AnchorPane fxmlProfileHandler = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlProfileHandler.fxml")));
+                Scene profileHandlerScreen = new Scene(fxmlProfileHandler);
+                stage.setScene(profileHandlerScreen);
+            }
         }
     }
 
