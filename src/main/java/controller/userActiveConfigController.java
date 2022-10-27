@@ -2,6 +2,8 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -39,6 +41,11 @@ public class userActiveConfigController implements Initializable {
     private TableColumn<RegisteredChannel, String> columnACTION;
     @FXML
     private Text userLABEL;
+    @FXML
+    private TextField searchField;
+
+    ObservableList<RegisteredChannel> registeredChannelObservableList = FXCollections.observableArrayList();
+    FilteredList<RegisteredChannel> registeredChannelFilteredList;
 
     private final int rowsPerPage = 10;
     private int pages = 1;
@@ -54,7 +61,7 @@ public class userActiveConfigController implements Initializable {
         Main.changeScene("userChannelConfig");
     }
 
-    private ObservableList<RegisteredChannel> getRegisteredChannelData() {
+    private void getRegisteredChannelData() {
         PreparedStatement stmt;
         ResultSet resultSet;
         Connection conn;
@@ -83,13 +90,19 @@ public class userActiveConfigController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return registeredChannelList;
+        this.registeredChannelObservableList = registeredChannelList;
+        // return registeredChannelList;
     }
 
     private Node generatePages(int pageIndex) {
         int fromIndex = pageIndex * rowsPerPage;
-        int toIndex = Math.min(fromIndex + rowsPerPage, getRegisteredChannelData().size());
-        tableView.setItems(FXCollections.observableArrayList(getRegisteredChannelData().subList(fromIndex, toIndex)));
+        if (this.registeredChannelFilteredList != null) {
+            int toIndex = Math.min(fromIndex + rowsPerPage, registeredChannelFilteredList.size());
+            tableView.setItems(FXCollections.observableArrayList(registeredChannelFilteredList.subList(fromIndex, toIndex)));
+        } else {
+            int toIndex = Math.min(fromIndex + rowsPerPage, registeredChannelObservableList.size());
+            tableView.setItems(FXCollections.observableArrayList(registeredChannelObservableList.subList(fromIndex, toIndex)));
+        }
         return new BorderPane(tableView);
     }
 
@@ -98,8 +111,9 @@ public class userActiveConfigController implements Initializable {
         columnCHANNEL.setCellValueFactory(new PropertyValueFactory<>("channel_name"));
         columnTYPE.setCellValueFactory(new PropertyValueFactory<>("channel_type"));
         columnACTION.setCellFactory(param -> new TableCell<>() {
-//            private final Button editButton = new Button("Edit");
+            //            private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
+
             @Override
             public void updateItem(String item, boolean empty) {
                 super.updateItem(item, empty);
@@ -158,10 +172,10 @@ public class userActiveConfigController implements Initializable {
 
         if (tableView.getItems().isEmpty()) {
             pages = 1;
-        }else if (getRegisteredChannelData().size() % rowsPerPage == 0) {
-            pages = getRegisteredChannelData().size() / rowsPerPage;
-        } else if (getRegisteredChannelData().size() > rowsPerPage) {
-            pages = getRegisteredChannelData().size() / rowsPerPage + 1;
+        } else if (registeredChannelObservableList.size() % rowsPerPage == 0) {
+            pages = registeredChannelObservableList.size() / rowsPerPage;
+        } else if (registeredChannelObservableList.size() > rowsPerPage) {
+            pages = registeredChannelObservableList.size() / rowsPerPage + 1;
         }
         pagination.setPageCount(pages);
         pagination.setPageFactory(this::generatePages);
@@ -169,7 +183,39 @@ public class userActiveConfigController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        getRegisteredChannelData();
         userLABEL.setText("Olá, " + User.getInstance().getName());
+
+        FilteredList<RegisteredChannel> filteredData = new FilteredList<>(this.registeredChannelObservableList, b -> true);
+
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(registeredChannel -> {
+                if (newValue.isEmpty() || newValue.isBlank() || newValue == null) {
+                    return true;
+                }
+
+                String searchKeyword = newValue.toLowerCase();
+
+                if (registeredChannel.getChannel_name().toLowerCase().indexOf(searchKeyword) > -1) {
+                    return true;
+                } else if (Integer.toString(registeredChannel.getId()).indexOf(searchKeyword) > -1) {
+                    return true;
+                } else if (registeredChannel.getChannel_type().toLowerCase().indexOf(searchKeyword) > -1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            this.registeredChannelFilteredList = filteredData;
+            updateTable();
+        });
+
+        SortedList<RegisteredChannel> sortedData = new SortedList<>(filteredData);
+
+        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
+
+        tableView.setItems(sortedData);
+
         updateTable();
     }
 }
