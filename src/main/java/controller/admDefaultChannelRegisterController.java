@@ -42,6 +42,11 @@ public class admDefaultChannelRegisterController implements Initializable {
     }
 
     @FXML
+    private void goToCreateAdm(ActionEvent event) throws IOException {
+        Main.changeScene("admCreateAccount");
+    }
+
+    @FXML
     private void saveChannelAction(ActionEvent event){
         String type_c = type_channel.getValue();
         String type_a = authentication_type.getValue();
