@@ -37,7 +37,7 @@ public class LoginFormsController implements Initializable {
             if (email.equals("admin") && password.equals("admin")) {
                 emailInputField.setText("");
                 passwordInputField.setText("");
-                Main.changeScene("admDefaultChannel");
+                Main.changeScene("profileHandler");
             } else {
                 PreparedStatement stmt;
                 ResultSet resultSet;

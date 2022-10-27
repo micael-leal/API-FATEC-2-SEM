@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileHandlerController">
+    <children>
+        <VBox prefHeight="550.0" prefWidth="1100.0">
+            <children>
+            <AnchorPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="153.0" layoutX="474.0" layoutY="11.0">
+                     <image>
+                        <Image url="@trackcash_logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="562.0" prefWidth="1100.0" style="-fx-background-color: FFFFFF;">
+                    <children>
+                        <Text fill="#ff3e15" layoutX="376.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Entrar como administrador?" textAlignment="CENTER" wrappingWidth="348.0" AnchorPane.bottomAnchor="345.283203125" AnchorPane.leftAnchor="376.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="112.435546875">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="loginAdmButton" alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Sim">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="linkReturn" layoutX="483.0" layoutY="376.0" text="Voltar a tela de log-in" textFill="#ff3e15">
+                     <font>
+                        <Font name="Ubuntu" size="13.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button fx:id="loginUserButton" alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="userProfileButton" text="Simular Cliente" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
