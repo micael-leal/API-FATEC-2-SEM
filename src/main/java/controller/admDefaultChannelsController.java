@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import model.Channel;
 import model.ConnectionFactory;
+import model.User;
 import view.Main;
 
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class admDefaultChannelsController implements Initializable {
 
     @FXML
     private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
         Main.changeScene("loginForm");
     }
 

@@ -33,6 +33,7 @@ public class admDefaultChannelRegisterController implements Initializable {
 
     @FXML
     private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
         Main.changeScene("loginForm");
     }
 

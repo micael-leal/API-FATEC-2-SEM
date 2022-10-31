@@ -50,7 +50,7 @@ public class LoginFormsController implements Initializable {
                     usuarioLogado.setName(resultSet.getString("name"));
                     usuarioLogado.setEmail(resultSet.getString("email"));
                     usuarioLogado.setPassword(resultSet.getString("password"));
-                    usuarioLogado.setPassword(resultSet.getString("phone"));
+                    usuarioLogado.setPhone(resultSet.getString("phone"));
                     usuarioLogado.setDocument(resultSet.getString("document"));
                     usuarioLogado.setType(resultSet.getInt("type_adm"));
 
