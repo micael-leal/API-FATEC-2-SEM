@@ -31,12 +31,23 @@ public class userProfileController implements Initializable {
     @FXML
     private Button userProfileButton;
     @FXML
+    private Button admProfileButton;
+    @FXML
     private void goToUserActiveChannels() throws IOException {
         Main.changeScene("userActiveConfig");
     }
     @FXML
     private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
+    }
+    @FXML
+    public void goToAdmProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("admDefaultChannel");
+    }
+    @FXML
+    private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
+        Main.changeScene("loginForm");
     }
     @FXML
     public void buttonSaveChange(ActionEvent event) throws IOException {
@@ -71,6 +82,9 @@ public class userProfileController implements Initializable {
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) {
 
+        if (!(User.getInstance().getEmail().equals("admin"))) {
+            admProfileButton.setVisible(false);
+        }
 
         userLABEL.setText("Olá, " + User.getInstance().getName());
         nameField.setText(User.getInstance().getName());

@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userEditChannelToken">
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userEditChannelToken">
     <children>
         <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -53,6 +53,11 @@
                               <Button fx:id="profileButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#goToProfileChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Perfil" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                                 </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="256.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="admProfileButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#goToAdmProfile" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Opções de administrador" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
                            <children>
                                         <Button mnemonicParsing="false" onAction="#leaveButtonAction" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">

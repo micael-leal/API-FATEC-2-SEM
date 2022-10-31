@@ -2,6 +2,7 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -29,6 +30,8 @@ public class userEditChannelToken implements Initializable {
     private TextField Inputid;
     @FXML
     private Button channelConfig;
+    @FXML
+    private Button admProfileButton;
 
     @FXML
     private void leaveButtonAction() throws IOException {
@@ -59,8 +62,18 @@ public class userEditChannelToken implements Initializable {
         Main.changeScene("userProfile");
     }
 
+    @FXML
+    public void goToAdmProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("admDefaultChannel");
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        if (!(User.getInstance().getEmail().equals("admin"))) {
+            admProfileButton.setVisible(false);
+        }
+
     }
 
     void setTextField(int id) {

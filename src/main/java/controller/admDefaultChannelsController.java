@@ -1,6 +1,7 @@
 package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -10,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import model.Channel;
 import model.ConnectionFactory;
+import model.User;
 import view.Main;
 
 import java.io.IOException;
@@ -39,12 +41,18 @@ public class admDefaultChannelsController implements Initializable {
 
     @FXML
     private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
         Main.changeScene("loginForm");
     }
 
     @FXML
     private void goToAdmDefaultChannelRegister() throws IOException {
         Main.changeScene("admDefaultChannelRegister");
+    }
+
+    @FXML
+    public void goToUserProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("userActiveConfig");
     }
 
     private ObservableList<Channel> getRegisteredChannelData() {
