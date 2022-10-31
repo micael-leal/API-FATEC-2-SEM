@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -43,6 +44,8 @@ public class userActiveConfigController implements Initializable {
     private Text userLABEL;
     @FXML
     private TextField searchField;
+    @FXML
+    private Button admProfileButton;
 
     ObservableList<RegisteredChannel> registeredChannelObservableList = FXCollections.observableArrayList();
     FilteredList<RegisteredChannel> registeredChannelFilteredList;
@@ -59,6 +62,11 @@ public class userActiveConfigController implements Initializable {
     @FXML
     private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
+    }
+
+    @FXML
+    public void goToAdmProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("admDefaultChannel");
     }
 
     private void getRegisteredChannelData() {
@@ -183,6 +191,11 @@ public class userActiveConfigController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        if (!(User.getInstance().getEmail().equals("admin"))) {
+            admProfileButton.setVisible(false);
+        }
+
         getRegisteredChannelData();
         userLABEL.setText("Olá, " + User.getInstance().getName());
 

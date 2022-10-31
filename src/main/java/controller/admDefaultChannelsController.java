@@ -1,6 +1,7 @@
 package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -45,6 +46,11 @@ public class admDefaultChannelsController implements Initializable {
     @FXML
     private void goToAdmDefaultChannelRegister() throws IOException {
         Main.changeScene("admDefaultChannelRegister");
+    }
+
+    @FXML
+    public void goToUserProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("userActiveConfig");
     }
 
     private ObservableList<Channel> getRegisteredChannelData() {

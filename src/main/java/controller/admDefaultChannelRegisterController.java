@@ -47,6 +47,11 @@ public class admDefaultChannelRegisterController implements Initializable {
     }
 
     @FXML
+    public void goToUserProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("userActiveConfig");
+    }
+
+    @FXML
     private void saveChannelAction(ActionEvent event){
         String type_c = type_channel.getValue();
         String type_a = authentication_type.getValue();
