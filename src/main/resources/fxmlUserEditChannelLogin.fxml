@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userEditChannelLogin">
+    <children>
+        <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane maxHeight="550.0" maxWidth="230.0" minHeight="550.0" minWidth="230.0" prefHeight="550.0" prefWidth="230.0" styleClass="sidebar">
+                    <children>
+                        <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="100.0" prefWidth="230.0">
+                                    <children>
+                                        <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@trackcash_logo_branca.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="50.0" prefWidth="230.0">
+                                    <children>
+                                        <Text fx:id="userLABEL" layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                                            <font>
+                                                <Font name="Ubuntu" size="16.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                                    <children>
+                                        <Button fx:id="activeChannel" mnemonicParsing="false" onAction="#goToUserActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Canais ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
+                                    <children>
+                                        <Button fx:id="channelConfig" mnemonicParsing="false" onAction="#goToUserChannelConfig" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Configuração de canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="profileButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#goToProfileChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Perfil" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                                </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                                        <Button mnemonicParsing="false" onAction="#leaveButtonAction" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                            <styleClass>
+                                                <String fx:value="sidebarButtons" />
+                                                <String fx:value="logoutButton" />
+                                            </styleClass>
+                                        </Button>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefWidth="870.0" styleClass="background">
+                    <children>
+                        <VBox prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="100.0" prefWidth="870.0">
+                                    <children>
+                                        <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Edição de Canais" AnchorPane.leftAnchor="47.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="450.0" prefWidth="870.0">
+                                    <children>
+                                        <TextField fx:id="Inputsenha" layoutX="40.0" layoutY="147.0" prefHeight="38.0" prefWidth="262.0" promptText="Senha" styleClass="searchField" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="150.0" />
+                                        <Label layoutX="49.0" layoutY="44.0" text="Canal" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="45.0">
+                                            <font>
+                                                <Font name="Ubuntu" size="13.0" />
+                                            </font></Label>
+                              <TextField fx:id="Inputuser" layoutX="360.0" layoutY="64.0" prefHeight="38.0" prefWidth="262.0" promptText="Usuario" styleClass="searchField" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0" />
+                              <TextField fx:id="Inputid" editable="false" layoutX="39.0" layoutY="64.0" prefHeight="38.0" prefWidth="262.0" promptText="Canal" styleClass="searchField" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="70.0" />
+                              <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveUpdate" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="100.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="40.0" layoutY="131.0" text="Senha" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="125.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="59.0" layoutY="54.0" text="Usuario" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
