@@ -5,13 +5,18 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import model.ConnectionFactory;
 import model.RegisteredChannel;
 import model.User;
@@ -59,6 +64,10 @@ public class userActiveConfigController implements Initializable {
     @FXML
     private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
+    }
+    @FXML
+    private void goToProfileChannels() throws IOException {
+        Main.changeScene("userProfile");
     }
 
     private void getRegisteredChannelData() {
@@ -111,7 +120,7 @@ public class userActiveConfigController implements Initializable {
         columnCHANNEL.setCellValueFactory(new PropertyValueFactory<>("channel_name"));
         columnTYPE.setCellValueFactory(new PropertyValueFactory<>("channel_type"));
         columnACTION.setCellFactory(param -> new TableCell<>() {
-            //            private final Button editButton = new Button("Edit");
+            private final Button editButton = new Button("Edit");
             private final Button deleteButton = new Button("Delete");
 
             @Override
@@ -122,13 +131,44 @@ public class userActiveConfigController implements Initializable {
                     setGraphic(null);
                     setText(null);
                 } else {
-//                    editButton.setOnAction(event -> {
-//                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
-//                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//                        alert.setContentText("[EDIT] You have clicked:\n" + rc.getId() + " | " + rc.getChannel_name());
-//                        alert.show();
-//
-//                    });
+                    editButton.getStyleClass().add("actionButtons");
+                    editButton.setOnAction(event -> {
+                        RegisteredChannel rc = getTableView().getItems().get(getIndex());
+                        if (rc.getChannel_type().equals("TOKEN")) {
+
+                            FXMLLoader loader = new FXMLLoader();
+                            loader.setLocation(getClass().getResource("/fxmlUserEditChannelToken.fxml"));
+                            try {
+                                loader.load();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            userEditChannelToken userToken = loader.getController();
+                            userToken.setTextField(rc.getId());
+                            Parent parent = loader.getRoot();
+                            Stage stage = new Stage();
+                            stage.setScene(new Scene(parent));
+                            stage.initStyle(StageStyle.UTILITY);
+                            stage.show();
+
+                        }else{
+                            FXMLLoader loader = new FXMLLoader();
+                            loader.setLocation(getClass().getResource("/fxmlUserEditChannelLogin.fxml"));
+                            try {
+                                loader.load();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            userEditChannelLogin userLogin = loader.getController();
+                            userLogin.setTextField(rc.getId());
+                            Parent parent = loader.getRoot();
+                            Stage stage = new Stage();
+                            stage.setScene(new Scene(parent));
+                            stage.initStyle(StageStyle.UTILITY);
+                            stage.show();
+                        }
+                    });
+
                     deleteButton.getStyleClass().add("actionButtons");
                     deleteButton.setOnAction(event -> {
                         RegisteredChannel rc = getTableView().getItems().get(getIndex());
@@ -163,8 +203,7 @@ public class userActiveConfigController implements Initializable {
                             }
                         }
                     });
-                    //HBox buttonsPane = new HBox(editButton, deleteButton);
-                    HBox buttonsPane = new HBox(deleteButton);
+                    HBox buttonsPane = new HBox(editButton, deleteButton);
                     setGraphic(buttonsPane);
                 }
             }
