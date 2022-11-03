@@ -53,7 +53,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Adicionar Administrador" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button mnemonicParsing="false" onAction="#goToCreateAdm" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Adicionar Administrador" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="256.0" prefHeight="48.0" prefWidth="230.0">
