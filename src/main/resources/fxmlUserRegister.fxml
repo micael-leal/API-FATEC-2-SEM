@@ -40,12 +40,12 @@
                                  <children>
                                     <Text fill="WHITE" layoutX="99.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro!" textAlignment="CENTER" wrappingWidth="281.0">
                                        <font>
-                                          <Font size="25.0" />
+                                          <Font name="System Bold" size="24.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="WHITE" layoutX="99.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces, Transportadoras, Meios de Pagamento e Instituições Financeiras" textAlignment="CENTER" wrappingWidth="281.0">
+                                    <Text fill="WHITE" layoutX="91.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces, Meios de Pagamento e Instituições Financeiras." textAlignment="CENTER" wrappingWidth="297.0">
                                        <font>
-                                          <Font size="16.0" />
+                                          <Font size="18.0" />
                                        </font>
                                     </Text>
                                  </children>
