@@ -83,6 +83,11 @@ public class Main extends Application {
                 Scene EditChannelConfig = new Scene(fxmlUserEditChannelConfig);
                 stage.setScene(EditChannelConfig);
             }
+            case "FAQ" -> {
+                AnchorPane fxmlUserFAQ = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlUserFAQ.fxml")));
+                Scene userFAQScreen = new Scene(fxmlUserFAQ);
+                stage.setScene(userFAQScreen);
+            }
         }
     }
 

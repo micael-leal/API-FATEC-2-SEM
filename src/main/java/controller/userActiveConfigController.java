@@ -65,6 +65,11 @@ public class userActiveConfigController implements Initializable {
     }
 
     @FXML
+    private void goToFAQ() throws IOException {
+        Main.changeScene("FAQ");
+    }
+
+    @FXML
     private void goToUserChannelConfig() throws IOException {
         Main.changeScene("userChannelConfig");
     }

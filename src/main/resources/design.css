@@ -1,3 +1,7 @@
+.anchor-pane {
+    -fx-font-family: Ubuntu;
+}
+
 .actionButtons {
     -fx-background-color: transparent;
     -fx-start-margin: 30px;
@@ -127,4 +131,30 @@
     -fx-font-size: 14;
     -fx-background-radius: 8;
     -fx-cursor: hand;
+}
+
+.accordion {
+    -fx-padding: 10;
+}
+
+.accordion > .titled-pane {
+    -fx-text-fill: #FF3E15;
+    -fx-background-color: #F8F8F8;
+    -fx-background-radius: 10;
+}
+
+.accordion > .titled-pane > .title {
+    -fx-padding: 12;
+    -fx-background-color: #ededed;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: white;
+    -fx-background-radius: 10;
+}
+
+.accordion > .titled-pane:collapsed > .title:hover {
+    -fx-background-color: #ededed;
+}
+
+.accordion > .titled-pane:collapsed > .title {
+    -fx-background-color: white;
 }

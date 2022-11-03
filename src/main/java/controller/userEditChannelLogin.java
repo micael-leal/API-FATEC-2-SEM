@@ -36,6 +36,10 @@ public class userEditChannelLogin implements Initializable {
     private Button admProfileButton;
 
     @FXML
+    private void goToFAQ() throws IOException {
+        Main.changeScene("FAQ");
+    }
+    @FXML
     private void leaveButtonAction() throws IOException {
         Stage stage = (Stage) channelConfig.getScene().getWindow();
         stage.close();
