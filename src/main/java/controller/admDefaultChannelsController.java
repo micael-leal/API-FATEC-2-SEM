@@ -124,6 +124,11 @@ public class admDefaultChannelsController implements Initializable {
         Main.changeScene("userActiveConfig");
     }
 
+    @FXML
+    private void goToCreateAdm(ActionEvent event) throws IOException {
+        Main.changeScene("admCreateAccount");
+    }
+
     private ObservableList<Channel> getRegisteredChannelData() {
         PreparedStatement stmt;
         ResultSet resultSet;
