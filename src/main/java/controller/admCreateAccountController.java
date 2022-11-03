@@ -74,4 +74,9 @@ public class admCreateAccountController {
     private void goToAdmActiveChannels(ActionEvent event) throws IOException {
         Main.changeScene("admDefaultChannel");
     }
+
+    @FXML
+    private void goToUserConfigChannel(ActionEvent event) throws IOException {
+        Main.changeScene("userActiveConfig");
+    }
 }
