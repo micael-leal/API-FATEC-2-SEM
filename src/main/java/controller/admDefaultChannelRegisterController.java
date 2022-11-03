@@ -37,12 +37,23 @@ public class admDefaultChannelRegisterController implements Initializable {
 
     @FXML
     private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
         Main.changeScene("loginForm");
     }
 
     @FXML
     private void goToAdmActiveChannels(ActionEvent event) throws IOException {
         Main.changeScene("admDefaultChannel");
+    }
+
+    @FXML
+    private void goToCreateAdm(ActionEvent event) throws IOException {
+        Main.changeScene("admCreateAccount");
+    }
+
+    @FXML
+    public void goToUserProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("userActiveConfig");
     }
 
     @FXML

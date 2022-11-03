@@ -1,6 +1,7 @@
 package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -10,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import model.Channel;
 import model.ConnectionFactory;
+import model.User;
 import view.Main;
 
 import java.io.IOException;
@@ -57,6 +59,7 @@ public class admDefaultChannelsController implements Initializable {
 
     @FXML
     private void leaveButtonAction() throws IOException {
+        User.getInstance().cleanUserSession();
         Main.changeScene("loginForm");
     }
 
@@ -92,13 +95,13 @@ public class admDefaultChannelsController implements Initializable {
         ObservableList<Channel> registeredChannelList = FXCollections.observableArrayList();
 
         try {
-            if ((searchAuth.getValue() != null && searchChannel.getValue() == null) || (searchAuth.getValue() != "Sem filtro" && searchChannel.getValue() == "Sem filtro") ){
-                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE auth = " + '"'+ searchAuth.getValue().toUpperCase() +'"');
-            } else if ((searchAuth.getValue() == null  && searchChannel.getValue() != null) || (searchAuth.getValue() == "Sem filtro" && searchChannel.getValue() != "Sem filtro"))  {
-                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE type = " + '"'+ searchChannel.getValue()+'"');
-            }else if ((searchAuth.getValue() != "Sem filtro" && searchChannel.getValue() != "Sem filtro")){
-                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE auth = " + '"'+ searchAuth.getValue().toUpperCase() +'"' +"AND type = " + '"'+ searchChannel.getValue()+'"');
-            }else{
+            if ((searchAuth.getValue() != null && searchChannel.getValue() == null) || (searchAuth.getValue() != "Sem filtro" && searchChannel.getValue() == "Sem filtro")) {
+                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE auth = " + '"' + searchAuth.getValue().toUpperCase() + '"');
+            } else if ((searchAuth.getValue() == null && searchChannel.getValue() != null) || (searchAuth.getValue() == "Sem filtro" && searchChannel.getValue() != "Sem filtro")) {
+                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE type = " + '"' + searchChannel.getValue() + '"');
+            } else if ((searchAuth.getValue() != "Sem filtro" && searchChannel.getValue() != "Sem filtro")) {
+                stmt = conn.prepareStatement("SELECT * FROM defaultChannels WHERE auth = " + '"' + searchAuth.getValue().toUpperCase() + '"' + "AND type = " + '"' + searchChannel.getValue() + '"');
+            } else {
                 stmt = conn.prepareStatement("SELECT * FROM defaultChannels");
             }
             resultSet = stmt.executeQuery();
@@ -115,6 +118,10 @@ public class admDefaultChannelsController implements Initializable {
             e.printStackTrace();
         }
         return registeredChannelList;
+    }
+
+    public void goToUserProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("userActiveConfig");
     }
 
     private ObservableList<Channel> getRegisteredChannelData() {

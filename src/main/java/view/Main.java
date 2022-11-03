@@ -58,8 +58,30 @@ public class Main extends Application {
                 Scene forgotPasswordScreen = new Scene(fxmlForgotPassword);
                 stage.setScene(forgotPasswordScreen);
             }
+            case "userProfile" -> {
+                AnchorPane fxmlUserProfile = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlUserProfile.fxml")));
+                Scene userProfile = new Scene(fxmlUserProfile);
+                stage.setScene(userProfile);
+            }
             case "loginForm" -> {
                 stage.setScene(loginFormScreen);
+            }
+            case "admCreateAccount" -> {
+                AnchorPane fxmlAdmCreateAccountController = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlAdmCreateAccountController.fxml")));
+                Scene admCreateAccountScreen = new Scene(fxmlAdmCreateAccountController);
+                stage.setScene(admCreateAccountScreen);
+            }
+
+            case "profileHandler" -> {
+                AnchorPane fxmlProfileHandler = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlProfileHandler.fxml")));
+                Scene profileHandlerScreen = new Scene(fxmlProfileHandler);
+                stage.setScene(profileHandlerScreen);
+
+            }
+            case "EditChannelConfig" -> {
+                AnchorPane fxmlUserEditChannelConfig = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlUserEditChannelLogin.fxml")));
+                Scene EditChannelConfig = new Scene(fxmlUserEditChannelConfig);
+                stage.setScene(EditChannelConfig);
             }
         }
     }

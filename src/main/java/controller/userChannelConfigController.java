@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -29,6 +30,8 @@ public class userChannelConfigController implements Initializable {
     private Button buttonSAVE;
     @FXML
     private Text userLABEL;
+    @FXML
+    private Button admProfileButton;
     private final ArrayList<String> channelList = new ArrayList<>();
     private String selectedType;
     private String token = "";
@@ -42,8 +45,20 @@ public class userChannelConfigController implements Initializable {
     }
 
     @FXML
+    public void goToProfileChannels(ActionEvent event) throws IOException{
+        Main.changeScene("userProfile");
+    }
+
+
+   @FXML
     private void goToUserActiveChannels() throws IOException {
         Main.changeScene("userActiveConfig");
+
+    }
+
+    @FXML
+    public void goToAdmProfile(ActionEvent actionEvent) throws IOException {
+        Main.changeScene("admDefaultChannel");
     }
 
     @FXML
@@ -107,6 +122,11 @@ public class userChannelConfigController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        if (!(User.getInstance().getEmail().equals("admin"))) {
+            admProfileButton.setVisible(false);
+        }
+
         userLABEL.setText("Olá, " + User.getInstance().getName());
         try {
             Connection conn = ConnectionFactory.getConnection();
@@ -167,4 +187,5 @@ public class userChannelConfigController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
 }
