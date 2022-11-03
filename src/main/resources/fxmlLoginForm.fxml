@@ -77,13 +77,13 @@
                         <Image url="@bg_login_1.png" />
                      </image>
                   </ImageView>
-                  <Pane prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: FF3E15; -fx-opacity: .7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Text fill="WHITE" layoutX="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro" textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="170.0">
+                  <Pane prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: FF3E15; -fx-opacity: .8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Text fill="WHITE" layoutX="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muito mais que um conciliador financeiro!" textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="170.0">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="135.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces e Meios de Pagamento!" textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="260.0">
+                  <Text fill="WHITE" layoutX="135.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A melhor ferramenta no mercado e a única com processo automatizado, que compara as informações entre Plataformas, MarketPlaces, Meios de Pagamento e Instituições Financeiras." textAlignment="CENTER" wrappingWidth="306.511962890625" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="260.0">
                      <font>
                         <Font name="Ubuntu" size="18.0" />
                      </font>
