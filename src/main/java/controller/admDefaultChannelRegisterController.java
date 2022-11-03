@@ -6,12 +6,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import model.Channel;
+import model.ConnectionFactory;
 import model.NewChannel;
 import model.User;
 import view.Main;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class admDefaultChannelRegisterController implements Initializable {
@@ -58,18 +62,41 @@ public class admDefaultChannelRegisterController implements Initializable {
         String type_a = authentication_type.getValue();
         String channel_name = channel_input_field.getText();
 
-        Channel channel = new Channel(
-            0,
-            channel_name,
-            type_c,
-            type_a
-        );
+        PreparedStatement stmt;
+        ResultSet resultSet;
+        Connection conn;
+        conn = ConnectionFactory.getConnection();
 
-        NewChannel newChannel = new NewChannel();
-        newChannel.addChannel(channel);
-        channel_input_field.setText("");
-        authentication_type.valueProperty().set(null);
-        type_channel.valueProperty().set(null);
+        try {
+            stmt = conn.prepareStatement( "select count(name) as countRegister from defaultchannels where defaultchannels.name = " +'"'+ channel_name.toUpperCase() +'"');
+            resultSet = stmt.executeQuery();
+            resultSet.next();
+            int countRegister = resultSet.getInt("countRegister");
+            conn.close();
+            if (countRegister == 0){
+                Channel channel = new Channel(
+                        0,
+                        channel_name,
+                        type_c,
+                        type_a
+                );
+
+                NewChannel newChannel = new NewChannel();
+                newChannel.addChannel(channel);
+                channel_input_field.setText("");
+                authentication_type.valueProperty().set(null);
+                type_channel.valueProperty().set(null);
+            }else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Já existe um canal cadastrado com esse nome!");
+                alert.show();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     @Override
