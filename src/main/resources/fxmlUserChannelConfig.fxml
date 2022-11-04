@@ -101,7 +101,7 @@
                            </children></AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button fx:id="buttonSAVE" alignment="CENTER" contentDisplay="CENTER" layoutX="716.0" layoutY="58.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" styleClass="saveButton" text="Salvar" />
+                              <Button fx:id="buttonSAVE" alignment="CENTER" contentDisplay="CENTER" layoutX="716.0" layoutY="58.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="38.0" />
                            </children>
                         </AnchorPane>
                      </children>

@@ -77,9 +77,9 @@
                     <children>
                         <VBox prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <children>
-                                <AnchorPane prefHeight="182.0" prefWidth="870.0">
+                                <AnchorPane prefHeight="213.0" prefWidth="870.0">
                                     <children>
-                                        <Text layoutX="47.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Adicionar Administrador" AnchorPane.leftAnchor="47.0">
+                                        <Text layoutX="47.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Adicionar Administrador" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="36.41796875">
                                  <font>
                                     <Font size="20.0" />
                                  </font></Text>
@@ -119,7 +119,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="238.0" minHeight="40.0" minWidth="250.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="35.0" prefWidth="181.0" styleClass="saveButton" text="Cadastrar Administrador">
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="599.0" layoutY="399.0" minHeight="40.0" minWidth="250.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="35.0" prefWidth="181.0" styleClass="saveButton" text="Cadastrar Administrador" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="38.0">
                                  <font>
                                     <Font size="16.0" />
                                  </font>

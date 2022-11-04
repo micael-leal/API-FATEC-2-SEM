@@ -128,11 +128,11 @@
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <Text layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Na aba 'Configuração de canais', você pode selecionar um canal já criado e configurá-lo de acordo com o seu caso." wrappingWidth="497.48095703125" />
+                                                <Text layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Na aba 'Configuração de canais', você pode selecionar um canal já criado e configurá-lo de acordo com o seu caso." wrappingWidth="497.48095703125" />
                                              </children></AnchorPane>
                                        </content>
                                     </TitledPane>
-                                    <TitledPane animated="false" layoutX="20.0" layoutY="188.0" text="Mudei alguns dados meus! Consigo alterar as informações do meu perfil? ↓">
+                                    <TitledPane animated="false" layoutX="20.0" layoutY="188.0" text="Mudei alguns dos meus dados pessoais. Consigo alterar as informações do meu perfil? ↓">
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
