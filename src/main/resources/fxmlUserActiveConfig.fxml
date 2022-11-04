@@ -56,6 +56,11 @@
                               <Button fx:id="profileButton" mnemonicParsing="false" onAction="#goToProfileChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Perfil" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="256.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="faqButton" mnemonicParsing="false" onAction="#goToFAQ" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="FAQ" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="208.0" prefHeight="48.0" prefWidth="230.0">
                            <children>
                               <Button fx:id="admProfileButton" mnemonicParsing="false" onAction="#goToAdmProfile" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Retornar como Administrador" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />

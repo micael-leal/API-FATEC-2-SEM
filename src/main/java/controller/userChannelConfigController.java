@@ -45,6 +45,11 @@ public class userChannelConfigController implements Initializable {
     }
 
     @FXML
+    private void goToFAQ() throws IOException {
+        Main.changeScene("FAQ");
+    }
+
+    @FXML
     public void goToProfileChannels(ActionEvent event) throws IOException{
         Main.changeScene("userProfile");
     }
@@ -53,7 +58,6 @@ public class userChannelConfigController implements Initializable {
    @FXML
     private void goToUserActiveChannels() throws IOException {
         Main.changeScene("userActiveConfig");
-
     }
 
     @FXML

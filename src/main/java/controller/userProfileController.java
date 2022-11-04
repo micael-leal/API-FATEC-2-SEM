@@ -32,6 +32,12 @@ public class userProfileController implements Initializable {
     private Button userProfileButton;
     @FXML
     private Button admProfileButton;
+
+    @FXML
+    private void goToFAQ() throws IOException {
+        Main.changeScene("FAQ");
+    }
+
     @FXML
     private void goToUserActiveChannels() throws IOException {
         Main.changeScene("userActiveConfig");

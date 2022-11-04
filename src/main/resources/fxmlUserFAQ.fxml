@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userFAQController">
+    <children>
+        <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane maxHeight="550.0" maxWidth="230.0" minHeight="550.0" minWidth="230.0" prefHeight="550.0" prefWidth="230.0" styleClass="sidebar">
+                    <children>
+                        <VBox prefHeight="550.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="100.0" prefWidth="230.0">
+                                    <children>
+                                        <ImageView fitHeight="43.0" fitWidth="124.0" layoutX="54.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@trackcash_logo_branca.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="50.0" prefWidth="230.0">
+                                    <children>
+                                        <Text fx:id="userLABEL" layoutX="72.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blackBg-text" text="Olá, usuario">
+                                            <font>
+                                                <Font name="Ubuntu" size="16.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                                    <children>
+                                        <Button fx:id="activeChannel" mnemonicParsing="false" onAction="#goToUserActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais Ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
+                                    <children>
+                                        <Button fx:id="channelConfig" mnemonicParsing="false" onAction="#goToUserChannelConfig" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Configuração de Canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="219.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="profileButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#goToProfileChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Perfil" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                                </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="256.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="faqButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="FAQ" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="256.0" prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="admProfileButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#goToAdmProfile" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Retornar como Administrador" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                                        <Button mnemonicParsing="false" onAction="#leaveButtonAction" prefHeight="48.0" prefWidth="230.0" text="Sair" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                            <styleClass>
+                                                <String fx:value="sidebarButtons" />
+                                                <String fx:value="logoutButton" />
+                                            </styleClass>
+                                        </Button>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefWidth="870.0" styleClass="background">
+                    <children>
+                        <VBox prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="100.0" prefWidth="870.0">
+                                    <children>
+                                        <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Perguntas Frequentes" AnchorPane.leftAnchor="47.0" />
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane prefHeight="451.0" prefWidth="870.0">
+                           <children>
+                              <Accordion layoutX="28.0" layoutY="135.0" prefHeight="451.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <panes>
+                                  <TitledPane animated="false" text="Posso adicionar mais de um canal do mesmo tipo? ↓">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Você pode adicionar quantos canais quiser." wrappingWidth="357.48095703125" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                       <font>
+                                          <Font name="Ubuntu" size="13.0" />
+                                       </font>
+                                  </TitledPane>
+                                  <TitledPane animated="false" text="Consigo alterar as informações de um canal já criado? ↓">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Na aba 'Canais ativos', onde os canais são exibidos, existe uma opção para alterar os dados do canal." wrappingWidth="499.48095703125" />
+                                             </children></AnchorPane>
+                                    </content>
+                                       <font>
+                                          <Font name="Ubuntu" size="13.0" />
+                                       </font>
+                                  </TitledPane>
+                                  <TitledPane animated="false" text="Criei um canal errado! Consigo deletar? ↓">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Na aba 'Canais ativos', onde os canais são exibidos, existe uma opção para deletar o canal." wrappingWidth="497.48095703125" />
+                                             </children></AnchorPane>
+                                    </content>
+                                       <font>
+                                          <Font name="Ubuntu" size="13.0" />
+                                       </font>
+                                  </TitledPane>
+                                    <TitledPane animated="false" layoutX="20.0" layoutY="104.0" text="Como configurar um canal? ↓">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Na aba 'Configuração de canais', você pode selecionar um canal já criado e configurá-lo de acordo com o seu caso." wrappingWidth="497.48095703125" />
+                                             </children></AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" layoutX="20.0" layoutY="188.0" text="Mudei alguns dados meus! Consigo alterar as informações do meu perfil? ↓">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sim! Na aba 'Perfil' é possível alterar os seus dados pessoais." wrappingWidth="497.48095703125" />
+                                             </children></AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
