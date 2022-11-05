@@ -220,7 +220,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   </tr>
    <tr>
     <td>Micael Leal</td>
-    <td>Scrum Master</td>
+    <td>Desenvolvedor</td>
     <td><a href="https://github.com/micael-leal">Github</a></td>
     <td><a href=""></a></td>
   </tr>
@@ -238,7 +238,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   </tr>
     <tr>
     <td>Henrique Neto</td>
-    <td>Desenvolvedor</td>
+    <td>Scrum Master</td>
     <td><a href="https://github.com/henriqFerreira">Github</a></td>
     <td><a href="https://www.linkedin.com/in/henriquepfneto/">Linked-In</a></td>
   </tr>
