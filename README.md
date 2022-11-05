@@ -206,6 +206,35 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   </p>
   <p align="justify">Esta interface permite ao administrador do sistema ter uma visão gerencial da aplicação, podendo verificar quais os canais estão cadastrados e seus respectivos tipos, bem como cadastrar novos canais.</p>
 </details>
+
+<h2>Sprint 3</h2>
+<details>
+  <summary>Detalhes</summary>
+  <br>
+  <h3 align="center">Demonstração de usabilidade</h3>
+   <br>
+  <h4 align="center">Tela usuário<br><a href="https://youtu.be/U2DLXnZG6fU">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/USUARIO.gif " width="65%" />
+  </p>
+  <p align="justify">Demonstração da tela de usuário. Essa interface permite que um usuário já cadastrado edite e delete canais</p>
+  
+ <br>
+  <h4 align="center">Tela de administrador <br><a href="https://youtu.be/9qIDDbtfjAI">Youtube (Qualidade melhor)</a></h4>
+  <p align="center">
+    <img src=" /src/main/resources/ADMIN.gif " width="65%" />
+  </p>
+   <p align="justify">A tela de administrador possibilita visualizar os canais ativos filtrando por marketplace ou autentificação e conferir quais são as perguntas feitas com mais frequência.</p>
+  
+ <br>
+  <h4 align="center">Entrar como administrador</h4>
+  <p align="center">
+    <img src=" /src/main/resources/Captura de tela de 2022-11-04 08-35-10.png " width="65%" />
+  </p>
+  <p align="justify">Tela para entrar como administrador, na qual o mesmo poderá escolher fazer login como administrador ou simular um cliente.</p>
+
+
+</details>
   
 <br>
 <h1 align="center"><samp>EQUIPE</samp></h1>
