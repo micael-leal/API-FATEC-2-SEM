@@ -78,7 +78,7 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
 <br>
 <h1 align="center"><samp>CRONOGRAMA DAS SPRINTS</samp></h1>
 
-![Equipe bytech](/src/main/resources/Cronograma%20das%20Sprints.png)
+![Equipe bytech](/src/main/resources/Cronograma_das_Sprints.png)
 
 <br>
 <h1 align="center"><samp>PRODUCT BACKLOG</samp></h1>
