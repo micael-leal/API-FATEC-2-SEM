@@ -68,7 +68,7 @@ public class admDefaultChannelRegisterController implements Initializable {
         conn = ConnectionFactory.getConnection();
 
         try {
-            stmt = conn.prepareStatement( "select count(name) as countRegister from defaultchannels where defaultchannels.name = " +'"'+ channel_name.toUpperCase() +'"');
+            stmt = conn.prepareStatement( "select count(name) as countRegister from defaultChannels where defaultChannels.name = " +'"'+ channel_name.toUpperCase() +'"');
             resultSet = stmt.executeQuery();
             resultSet.next();
             int countRegister = resultSet.getInt("countRegister");
