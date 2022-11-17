@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userProfileController">
    <children>
       <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -93,21 +93,21 @@
                                        <font>
                                           <Font size="15.0" />
                                        </font></Text>
+                                    <Text layoutX="60.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="nameField" layoutX="60.0" layoutY="120.0" prefHeight="34.0" prefWidth="300.0" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0" />
                                     <Text layoutX="60.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="120.0" />
                                     <TextField fx:id="cpfField" layoutX="66.0" layoutY="110.0" prefHeight="34.0" prefWidth="300.0" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="140.0" />
                                     <Text layoutX="52.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="190.0" />
                                     <TextField fx:id="emailField" layoutX="78.0" layoutY="159.0" prefHeight="34.0" prefWidth="300.0" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="210.0" />
                                     <Text layoutX="66.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="260.0" />
                                     <TextField fx:id="phoneField" layoutX="78.0" layoutY="211.0" prefHeight="34.0" prefWidth="300.0" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="280.0" />
-                                    <Text layoutX="60.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
-                                    <TextField fx:id="nameField" layoutX="60.0" layoutY="120.0" prefHeight="34.0" prefWidth="300.0" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0" />
                                  </children>
                               </AnchorPane>
                            </children>
                         </VBox>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button fx:id="buttonSaveChange" alignment="CENTER" contentDisplay="CENTER" layoutX="716.0" layoutY="58.0" mnemonicParsing="false" onAction="#buttonSaveChange" prefHeight="34.0" prefWidth="150.0" styleClass="saveButton" text="Salvar alterações" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+                              <Button fx:id="buttonSaveChange" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="716.0" layoutY="58.0" mnemonicParsing="false" onAction="#buttonSaveChange" prefHeight="34.0" prefWidth="150.0" styleClass="saveButton" text="Salvar alterações" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                      </children>

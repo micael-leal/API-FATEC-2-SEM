@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormsController">
     <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -43,16 +43,17 @@
                                             <Font name="Ubuntu" size="14.0" />
                                         </font>
                                     </TextField>
-                                    <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="306.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Acessar o Sistema">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
+                              <PasswordField fx:id="passwordInputField" layoutX="145.0" layoutY="215.0" prefHeight="17.0" prefWidth="270.0" promptText="Senha" styleClass="searchField" />
                               <Hyperlink fx:id="forgotPassword" layoutX="298.0" layoutY="271.0" onAction="#forgotPasswordOnAction" text="Esqueceu a senha?" textFill="#ff3e15">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
                                  </font>
                               </Hyperlink>
+                                    <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="306.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Acessar o Sistema">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
                               <Hyperlink fx:id="createAccount" layoutX="176.0" layoutY="362.0" onAction="#createAccountOnAction" text="Não possui uma conta? Cadastre-se" textFill="#ff3e15">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
@@ -63,7 +64,6 @@
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <PasswordField fx:id="passwordInputField" layoutX="145.0" layoutY="215.0" prefHeight="17.0" prefWidth="270.0" promptText="Senha" styleClass="searchField" />
                            </children>
                             </AnchorPane>
                         </children>

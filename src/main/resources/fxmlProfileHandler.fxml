@@ -29,7 +29,12 @@
                                 <Font name="System Bold" size="22.0" />
                             </font>
                         </Text>
-                        <Button fx:id="loginAdmButton" alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Sim">
+                        <Button fx:id="loginAdmButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="415.0" layoutY="205.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Sim">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loginUserButton" alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="userProfileButton" text="Simular Cliente" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -39,11 +44,6 @@
                         <Font name="Ubuntu" size="13.0" />
                      </font>
                   </Hyperlink>
-                  <Button fx:id="loginUserButton" alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="270.0" styleClass="userProfileButton" text="Simular Cliente" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
                </children>
                 </AnchorPane>
             </children>

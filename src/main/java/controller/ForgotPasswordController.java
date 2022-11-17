@@ -41,11 +41,12 @@ public class ForgotPasswordController implements Initializable {
 
     ForgotPassword forgot = new ForgotPassword();
 
-    @FXML
-    public void recoveryAction(ActionEvent event) {
+    public void recoveryAction() {
         forgot.setEmail(emailInputField.getText());
         if (forgot.emailTest()) {
             forgot.sendEmail(forgot.getEmail());
+            recoveryButton.setDefaultButton(false);
+            verifyButton.setDefaultButton(true);
             dynamicBox1.setVisible(false);
             dynamicBox2.setVisible(true);
         } else {
@@ -56,9 +57,10 @@ public class ForgotPasswordController implements Initializable {
 
     }
 
-    @FXML
-    public void verifyAction(ActionEvent event) {
+    public void verifyAction() {
         if (forgot.codeTest(codeField.getText())) {
+            verifyButton.setDefaultButton(false);
+            tradeButton.setDefaultButton(true);
             dynamicBox2.setVisible(false);
             dynamicBox3.setVisible(true);
         } else {
@@ -68,8 +70,7 @@ public class ForgotPasswordController implements Initializable {
         }
     }
 
-    @FXML
-    public void tradeAction(ActionEvent event) throws IOException {
+    public void tradeAction() throws IOException {
         if (newPasswordField.getText().equals(newConfirmField.getText())) {
             forgot.passwordUpdate(newPasswordField.getText());
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -85,6 +86,28 @@ public class ForgotPasswordController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        recoveryButton.setDefaultButton(true);
+        recoveryButton.setOnAction(actionEvent -> {
+            try {
+                recoveryAction();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+        verifyButton.setOnAction(actionEvent -> {
+            try {
+                verifyAction();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+        tradeButton.setOnAction(actionEvent -> {
+            try {
+                tradeAction();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
         returnButton.setOnAction(actionEvent -> {
             try {
                 Main.changeScene("loginForm");

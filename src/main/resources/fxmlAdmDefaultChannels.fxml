@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admDefaultChannelsController">
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admDefaultChannelsController">
    <children>
       <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -86,6 +86,15 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="450.0" prefWidth="870.0">
                            <children>
+                              <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:" />
+                              <ComboBox fx:id="searchChannel" layoutX="49.0" layoutY="68.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Tipo de Canal" styleClass="searchField" />
+                              <ComboBox fx:id="searchAuth" layoutX="49.0" layoutY="149.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Autentificação" styleClass="searchField" />
+                              <Button fx:id="searchButton" defaultButton="true" layoutX="49.0" layoutY="231.0" mnemonicParsing="false" onAction="#search" prefHeight="43.0" text="Pesquisar">
+                                 <styleClass>
+                                    <String fx:value="actionButtons" />
+                                    <String fx:value="saveButton" />
+                                 </styleClass>
+                              </Button>
                               <Pagination fx:id="pagination" layoutX="363.0" layoutY="37.0" prefHeight="361.0" prefWidth="452.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="37.0" />
                               <TableView fx:id="tableView" layoutX="362.0" layoutY="40.0" prefHeight="355.0" prefWidth="452.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="362.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="40.0">
                                  <columns>
@@ -98,15 +107,6 @@
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                  </columnResizePolicy>
                               </TableView>
-                              <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:" />
-                              <Button fx:id="searchButton" layoutX="49.0" layoutY="231.0" mnemonicParsing="false" onAction="#search" prefHeight="43.0" text="Pesquisar">
-                                 <styleClass>
-                                    <String fx:value="actionButtons" />
-                                    <String fx:value="saveButton" />
-                                 </styleClass>
-                              </Button>
-                              <ComboBox fx:id="searchChannel" layoutX="49.0" layoutY="68.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Tipo de Canal" styleClass="searchField" />
-                              <ComboBox fx:id="searchAuth" layoutX="49.0" layoutY="149.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Autentificação" styleClass="searchField" />
                               <Label fx:id="filterAuthErrorMessage" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="49.0" layoutY="132.0" prefHeight="17.0" prefWidth="270.0" textFill="RED">
                                  <font>
                                     <Font size="10.0" />

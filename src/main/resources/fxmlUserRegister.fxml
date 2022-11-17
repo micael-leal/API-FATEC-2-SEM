@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userRegisterController">
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userRegisterController">
    <children>
       <VBox prefHeight="550.0" prefWidth="1100.0">
          <children>
@@ -59,27 +59,6 @@
                                     <Font name="Ubuntu Bold" size="22.0" />
                                  </font>
                               </Text>
-                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="336.0" minHeight="40.0" minWidth="250.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: #FF3E15; -fx-background-radius: 5; -fx-text-fill: #ffffff;" text="Cadastrar Conta" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="336.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Button>
-                              <TextField fx:id="InputNome" layoutX="39.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="175.0">
-                                 <font>
-                                    <Font name="Ubuntu" size="16.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </TextField>
-                              <TextField fx:id="InputSenha" layoutX="337.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="175.0">
-                                 <font>
-                                    <Font name="Ubuntu" size="16.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </TextField>
                               <TextField fx:id="InputDocument" layoutX="36.0" layoutY="113.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="CPF/CNPJ" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="113.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
@@ -88,15 +67,7 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="InputTele" layoutX="334.0" layoutY="113.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Telefone(Com DDD)" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="113.0">
-                                 <font>
-                                    <Font name="Ubuntu" size="16.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </TextField>
-                              <TextField fx:id="InputCSenha" layoutX="334.0" layoutY="236.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Confirmar Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="236.0">
+                              <TextField fx:id="InputNome" layoutX="39.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="175.0">
                                  <font>
                                     <Font name="Ubuntu" size="16.0" />
                                  </font>
@@ -112,6 +83,35 @@
                                     <Insets left="20.0" />
                                  </padding>
                               </TextField>
+                              <TextField fx:id="InputTele" layoutX="334.0" layoutY="113.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Telefone(Com DDD)" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="113.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="InputSenha" layoutX="337.0" layoutY="175.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="175.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                              <TextField fx:id="InputCSenha" layoutX="334.0" layoutY="236.0" maxHeight="35.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="35.0" prefWidth="250.0" promptText="Confirmar Senha" style="-fx-background-color: #E5E5E5; -fx-background-radius: 5;" AnchorPane.topAnchor="236.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="40.0" layoutY="336.0" minHeight="40.0" minWidth="250.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="35.0" prefWidth="181.0" style="-fx-background-color: #FF3E15; -fx-background-radius: 5; -fx-text-fill: #ffffff;" text="Cadastrar Conta" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="336.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
                               <Hyperlink fx:id="enterUser" layoutX="393.0" layoutY="344.0" onAction="#enterUserOnAction" text="Já possui uma conta? Entre!" textFill="#ff3e15">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
