@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.*;
 
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import model.ConnectionFactory;
 import model.User;
 import view.Main;
@@ -25,9 +27,10 @@ public class LoginFormsController implements Initializable {
     private PasswordField passwordInputField;
     @FXML
     private Label saveMessageButton;
-
     @FXML
-    public void loginButton(ActionEvent event) throws IOException {
+    private Button saveButton;
+
+    public void loginButton() throws IOException {
         String email = emailInputField.getText();
         String password = passwordInputField.getText();
 
@@ -74,6 +77,14 @@ public class LoginFormsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        saveButton.setDefaultButton(true);
+        saveButton.setOnAction(actionEvent -> {
+            try {
+                loginButton();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     public void forgotPasswordOnAction(ActionEvent actionEvent) throws IOException {

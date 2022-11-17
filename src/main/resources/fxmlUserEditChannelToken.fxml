@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userEditChannelToken">
+<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userEditChannelToken">
     <children>
         <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -92,18 +92,18 @@
                                             <font>
                                                 <Font name="Ubuntu" size="13.0" />
                                             </font></Label>
-                              <TextField fx:id="InputToken" layoutX="360.0" layoutY="64.0" prefHeight="38.0" prefWidth="262.0" promptText="Token" styleClass="searchField" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0" />
                               <TextField fx:id="Inputid" editable="false" layoutX="39.0" layoutY="64.0" prefHeight="38.0" prefWidth="262.0" promptText="Canal" styleClass="searchField" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="70.0" />
-                              <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveUpdate" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="100.0">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
                               <Label layoutX="59.0" layoutY="54.0" text="Token" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="45.0">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
                                  </font>
                               </Label>
+                              <TextField fx:id="InputToken" layoutX="360.0" layoutY="64.0" prefHeight="38.0" prefWidth="262.0" promptText="Token" styleClass="searchField" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="70.0" />
+                              <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="535.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveUpdate" prefHeight="36.0" prefWidth="270.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="100.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
                                     </children>
                                 </AnchorPane>
                             </children>
