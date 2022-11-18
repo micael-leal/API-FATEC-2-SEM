@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -14,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormsController">
     <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -38,12 +40,12 @@
                                             <Font name="System Bold" size="22.0" />
                                         </font>
                                     </Text>
-                                    <TextField fx:id="emailInputField" layoutX="145.0" layoutY="161.0" prefHeight="38.0" prefWidth="270.0" promptText="E-mail" styleClass="searchField" AnchorPane.leftAnchor="145.0">
+                                    <TextField fx:id="emailInputField" layoutX="145.0" layoutY="144.0" prefHeight="38.0" prefWidth="270.0" promptText="E-mail" styleClass="searchField" AnchorPane.leftAnchor="145.0">
                                         <font>
                                             <Font name="Ubuntu" size="14.0" />
                                         </font>
                                     </TextField>
-                              <PasswordField fx:id="passwordInputField" layoutX="145.0" layoutY="215.0" prefHeight="17.0" prefWidth="270.0" promptText="Senha" styleClass="searchField" />
+                              <PasswordField fx:id="passwordInputField" layoutX="145.0" layoutY="198.0" prefHeight="17.0" prefWidth="270.0" promptText="Senha" styleClass="searchField" />
                               <Hyperlink fx:id="forgotPassword" layoutX="298.0" layoutY="271.0" onAction="#forgotPasswordOnAction" text="Esqueceu a senha?" textFill="#ff3e15">
                                  <font>
                                     <Font name="Ubuntu" size="13.0" />
@@ -64,7 +66,13 @@
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                           </children>
+                                    <CheckBox fx:id="checkBox" layoutX="318.0" layoutY="254.0" mnemonicParsing="false" onAction="#changeVisibility" text="Mostrar senha" textFill="#ff3e15" AnchorPane.leftAnchor="317.0" AnchorPane.rightAnchor="136.0">
+                                        <cursor>
+                                            <Cursor fx:constant="HAND" />
+                                        </cursor>
+                                    </CheckBox>
+                                    <TextField fx:id="passwordField" layoutX="145.0" layoutY="202.0" prefHeight="17.0" prefWidth="270.0" styleClass="searchField" stylesheets="@design.css" visible="false" AnchorPane.bottomAnchor="238.0" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="202.0" />
+                                </children>
                             </AnchorPane>
                         </children>
                     </VBox>
