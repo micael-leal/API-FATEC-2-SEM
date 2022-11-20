@@ -12,6 +12,8 @@ import view.Main;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class userRegisterController {
     @FXML
@@ -40,34 +42,53 @@ public class userRegisterController {
         Senha = InputSenha.getText();
         Csenha = InputCSenha.getText();
 
-        if (Senha.equals(Csenha)){
-            Connection conn;
-            PreparedStatement pstm;
-            String sql = "insert into users(document,name,email,phone,password) values (?,?,?,?,?)";
-            conn = ConnectionFactory.getConnection();
-            try {
-                pstm = conn.prepareStatement(sql);
-                pstm.setString(1, Docum);
-                pstm.setString(2, Nome);
-                pstm.setString(3, Email);
-                pstm.setString(4, Tele);
-                pstm.setString(5, Senha);
+        Connection conn;
+        PreparedStatement stmt;
+        conn = ConnectionFactory.getConnection();
+        try {
+            stmt = conn.prepareStatement("select email from users where email = (?)");
+            stmt.setString(1, Email);
+            ResultSet rs = stmt.executeQuery();
+            String result = null;
+            if (rs.next())
+                result = rs.getString(1);
 
-                pstm.execute();
-                pstm.close();
+            if (Email.equals(result)){
                 Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setContentText("Cadastro Feito");
+                alert.setContentText("Email já cadastrado");
                 alert.show();
-                Main.changeScene("loginForm");
-            } catch (Exception erro) {
-                System.out.println("Cadastro" + erro);
+
+            } else {
+
+                if (Senha.equals(Csenha)) {
+                    String sql = "insert into users(document,name,email,phone,password) values (?,?,?,?,?)";
+                    conn = ConnectionFactory.getConnection();
+                    try {
+                        stmt = conn.prepareStatement(sql);
+                        stmt.setString(1, Docum);
+                        stmt.setString(2, Nome);
+                        stmt.setString(3, Email);
+                        stmt.setString(4, Tele);
+                        stmt.setString(5, Senha);
+
+                        stmt.execute();
+                        stmt.close();
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setContentText("Cadastro Feito");
+                        alert.show();
+                        Main.changeScene("loginForm");
+                    } catch (Exception erro) {
+                        System.out.println("Cadastro" + erro);
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setContentText("As senhas não estão Corretas");
+                    alert.show();
+
+                }
+
             }
-        }else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setContentText("As senhas não estão Corretas");
-            alert.show();
-
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-
-    }
-    }
+    }}
