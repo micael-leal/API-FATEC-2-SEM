@@ -73,7 +73,7 @@ public class LoginFormsController implements Initializable {
                     usuarioLogado.setDocument(resultSet.getString("document"));
                     usuarioLogado.setType(resultSet.getInt("type_adm"));
 
-                    if (email.equals("admin") && password.equals("admin")) {
+                    if (usuarioLogado.getType()==1) {
                         emailInputField.setText("");
                         passwordInputField.setText("");
                         Main.changeScene("profileHandler");

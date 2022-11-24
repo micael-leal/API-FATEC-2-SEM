@@ -74,7 +74,7 @@ public class userEditChannelToken implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        if (!(User.getInstance().getEmail().equals("admin"))) {
+        if (!(User.getInstance().getType() == 1)) {
             admProfileButton.setVisible(false);
         }
 

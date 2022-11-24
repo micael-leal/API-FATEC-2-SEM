@@ -34,20 +34,22 @@ public class admCreateAccountController {
         if (Senha.equals(Csenha)){
             Connection conn;
             PreparedStatement pstm;
-            String sql = "insert into users(,name,email,password) values (?,?,?,?,?)";
+            String sql = "insert into users(password,phone,email,name,document,type_adm) values (?,?,?,?,?,?)";
             conn = ConnectionFactory.getConnection();
             try {
                 pstm = conn.prepareStatement(sql);
-                pstm.setString(2, Nome);
+                pstm.setString(1, Senha);
+                pstm.setString(2, "0");
                 pstm.setString(3, Email);
-                pstm.setString(5, Senha);
+                pstm.setString(4,Nome);
+                pstm.setString(5,"0");
+                pstm.setString(6,"1");
 
                 pstm.execute();
                 pstm.close();
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("Cadastro Feito");
                 alert.show();
-                Main.changeScene("loginForm");
             } catch (Exception erro) {
                 System.out.println("Cadastro" + erro);
             }

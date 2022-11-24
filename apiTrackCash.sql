@@ -35,7 +35,7 @@ CREATE TABLE `users` (
 INSERT INTO users (email, password, phone, name, document, type_adm) VALUES ('usuario01@gmail.com', 'usuario01p', '00 12345-6789', 'Usuário 01', '123.456.789-00', DEFAULT),
                                                                             ('usuario02@gmail.com', 'usuario02p', '00 12345-6789', 'Usuário 02', '123.456.789-00', DEFAULT),
                                                                             ('usuario03@gmail.com', 'usuario03p', '00 12345-6789', 'Usuário 03', '123.456.789-00', DEFAULT),
-                                                                            ('admin', 'admin', 'admin', 'admin', 'admin', 1);
+                                                                            ('admin', 'admin', 'admin', 'admin', 'admin', '1');
 
 CREATE TABLE `registeredChannelLogin` (
     `registeredChannelLogin_id` INT NOT NULL AUTO_INCREMENT,
