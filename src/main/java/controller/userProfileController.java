@@ -88,7 +88,7 @@ public class userProfileController implements Initializable {
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) {
 
-        if (!(User.getInstance().getEmail().equals("admin"))) {
+        if (!(User.getInstance().getType() == 1)) {
             admProfileButton.setVisible(false);
         }
 

@@ -199,7 +199,9 @@ public class userActiveConfigController implements Initializable {
                                     stmt.setInt(1, rc.getId());
                                     stmt.execute();
                                     conn.close();
-                                    updateTable();
+                                    getRegisteredChannelData();
+                                    updateSearchField();
+                                    searchField.setText("");
                                 } catch (SQLException e) {
                                     throw new RuntimeException(e);
                                 }
@@ -209,7 +211,9 @@ public class userActiveConfigController implements Initializable {
                                     stmt.setInt(1, rc.getId());
                                     stmt.execute();
                                     conn.close();
-                                    updateTable();
+                                    getRegisteredChannelData();
+                                    updateSearchField();
+                                    searchField.setText("");
                                 } catch (SQLException e) {
                                     throw new RuntimeException(e);
                                 }
@@ -222,6 +226,12 @@ public class userActiveConfigController implements Initializable {
             }
         });
 
+        updatePagination();
+    }
+
+    public void updatePagination() {
+
+        if(this.registeredChannelFilteredList == null) {
         if (tableView.getItems().isEmpty()) {
             pages = 1;
         } else if (registeredChannelObservableList.size() % rowsPerPage == 0) {
@@ -229,20 +239,21 @@ public class userActiveConfigController implements Initializable {
         } else if (registeredChannelObservableList.size() > rowsPerPage) {
             pages = registeredChannelObservableList.size() / rowsPerPage + 1;
         }
+        } else {
+            ObservableList<RegisteredChannel> newObservableList = this.registeredChannelFilteredList;
+            if (tableView.getItems().isEmpty()) {
+                pages = 1;
+            } else if (newObservableList.size() % rowsPerPage == 0) {
+                pages = newObservableList.size() / rowsPerPage;
+            } else if (newObservableList.size() > rowsPerPage) {
+                pages = newObservableList.size() / rowsPerPage + 1;
+            }
+        }
         pagination.setPageCount(pages);
         pagination.setPageFactory(this::generatePages);
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        if (!(User.getInstance().getEmail().equals("admin"))) {
-            admProfileButton.setVisible(false);
-        }
-
-        getRegisteredChannelData();
-        userLABEL.setText("Olá, " + User.getInstance().getName());
-
+    public void updateSearchField() {
         FilteredList<RegisteredChannel> filteredData = new FilteredList<>(this.registeredChannelObservableList, b -> true);
 
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -272,6 +283,19 @@ public class userActiveConfigController implements Initializable {
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
 
         tableView.setItems(sortedData);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        if (!(User.getInstance().getType() == 1)) {
+            admProfileButton.setVisible(false);
+        }
+
+        getRegisteredChannelData();
+        userLABEL.setText("Olá, " + User.getInstance().getName());
+
+        updateSearchField();
 
         updateTable();
     }

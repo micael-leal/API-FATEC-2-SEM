@@ -28,6 +28,22 @@ public class LoginFormsController implements Initializable {
     @FXML
     private Label saveMessageButton;
     @FXML
+    private CheckBox checkBox;
+    @FXML
+    private TextField passwordField;
+    @FXML
+    void changeVisibility(ActionEvent event) {
+        if (checkBox.isSelected()){
+            passwordField.setText(passwordInputField.getText());
+            passwordField.setVisible(true);
+            passwordInputField.setVisible(false);
+            return;
+        }
+        passwordInputField.setText(passwordField.getText());
+        passwordInputField.setVisible(true);
+        passwordField.setVisible(false);
+    }
+    @FXML
     private Button saveButton;
 
     public void loginButton() throws IOException {
@@ -57,7 +73,7 @@ public class LoginFormsController implements Initializable {
                     usuarioLogado.setDocument(resultSet.getString("document"));
                     usuarioLogado.setType(resultSet.getInt("type_adm"));
 
-                    if (email.equals("admin") && password.equals("admin")) {
+                    if (usuarioLogado.getType()==1) {
                         emailInputField.setText("");
                         passwordInputField.setText("");
                         Main.changeScene("profileHandler");

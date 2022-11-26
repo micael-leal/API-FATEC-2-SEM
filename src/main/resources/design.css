@@ -158,3 +158,41 @@
 .accordion > .titled-pane:collapsed > .title {
     -fx-background-color: white;
 }
+
+.saveButton:hover{
+    -fx-background-color:#dc3914;
+}
+
+.verifyButton:hover{
+    -fx-background-color:#dc3914;
+}
+.verifyButton{
+    -fx-background-color: #FF3E15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.register{
+    -fx-background-color: #FF3E15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.register:hover{
+    -fx-background-color:#dc3914;
+}
+
+.userProfileButton:hover{
+    -fx-background-color:rgb(239, 233, 233);
+}
+
+.sidebarButtons:hover{
+    -fx-background-color:#502e76;
+    -fx-underline: true;
+}
