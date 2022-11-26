@@ -4,9 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Pagination?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="1100.0" minHeight="550.0" minWidth="1100.0" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdmDefaultChannelsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdmEditChannelController">
    <children>
-      <HBox prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane maxHeight="550.0" maxWidth="230.0" minHeight="550.0" minWidth="230.0" prefHeight="550.0" prefWidth="230.0" styleClass="sidebar">
                <children>
@@ -43,7 +41,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Canais Ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button mnemonicParsing="false" onAction="#goToAdmActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais Ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="buttomEditChannel" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Editar Canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
@@ -79,45 +82,36 @@
                <children>
                   <VBox prefHeight="550.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="870.0">
+                        <AnchorPane prefHeight="170.0" prefWidth="870.0">
                            <children>
-                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Canais Ativos" />
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Editar Canais" AnchorPane.bottomAnchor="61.98046875" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="36.41796875" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="450.0" prefWidth="870.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1105.0" style="-fx-background-color: FFFFFF;">
                            <children>
-                              <Label layoutX="49.0" layoutY="32.0" text="Filtre os resultados aqui:" />
-                              <ComboBox fx:id="searchChannel" layoutX="49.0" layoutY="68.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Tipo de Canal" styleClass="searchField" />
-                              <ComboBox fx:id="searchAuth" layoutX="49.0" layoutY="149.0" opacity="0.85" prefHeight="38.0" prefWidth="150.0" promptText="Autentificação" styleClass="searchField" />
-                              <Button fx:id="searchButton" defaultButton="true" layoutX="49.0" layoutY="231.0" mnemonicParsing="false" onAction="#search" prefHeight="43.0" text="Pesquisar">
-                                 <styleClass>
-                                    <String fx:value="actionButtons" />
-                                    <String fx:value="saveButton" />
-                                 </styleClass>
-                              </Button>
-                              <Pagination fx:id="pagination" layoutX="253.0" layoutY="37.0" prefHeight="361.0" prefWidth="562.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="37.0" />
-                              <TableView fx:id="tableView" layoutX="252.0" layoutY="40.0" prefHeight="355.0" prefWidth="562.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="40.0">
-                                 <columns>
-                                    <TableColumn fx:id="columnID" editable="false" minWidth="2.0" prefWidth="55.0" resizable="false" text="ID" />
-                                    <TableColumn fx:id="columnCHANNEL" editable="false" prefWidth="124.0" resizable="false" text="CANAL" />
-                                    <TableColumn fx:id="columnTYPE" editable="false" prefWidth="136.0" resizable="false" text="TIPO DE CANAL" />
-                                    <TableColumn fx:id="columnAUTH" editable="false" prefWidth="147.0" text="AUTENTIFICAÇÃO" />
-                                    <TableColumn fx:id="columnACTION" editable="false" prefWidth="147.0" text="AÇÕES" />
-                                 </columns>
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                              </TableView>
-                              <Label fx:id="filterAuthErrorMessage" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="49.0" layoutY="132.0" prefHeight="17.0" prefWidth="270.0" textFill="RED">
+                              <TextField fx:id="selectedChannel" layoutX="46.0" layoutY="39.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0">
                                  <font>
-                                    <Font size="10.0" />
+                                    <Font name="Ubuntu" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="46.0" layoutY="31.0" text="Canal" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="18.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="filterChannelErrorMessage" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="49.0" layoutY="51.0" prefHeight="17.0" prefWidth="270.0" textFill="RED">
+                              <Label layoutX="330.0" layoutY="18.0" text="Tipo de canal" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="18.0">
                                  <font>
-                                    <Font size="10.0" />
+                                    <Font name="Ubuntu" size="13.0" />
                                  </font>
                               </Label>
+                              <Label layoutX="615.0" layoutY="18.0" text="Tipo de autenticação" AnchorPane.leftAnchor="615.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="18.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="typeChannel" layoutX="330.0" layoutY="41.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="40.0" />
+                              <ComboBox fx:id="typeAuthentication" layoutX="525.0" layoutY="40.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0" />
+                              <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="646.0" layoutY="369.0" mnemonicParsing="false" onMouseClicked="#onSaveButtonClicked" prefHeight="34.0" prefWidth="186.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="38.0" />
                            </children>
                         </AnchorPane>
                      </children>
