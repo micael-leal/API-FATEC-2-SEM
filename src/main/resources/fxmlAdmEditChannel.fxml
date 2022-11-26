@@ -13,8 +13,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdmDefaultChannelRegisterController">
-    <children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" stylesheets="@design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdmEditChannelController">
+   <children>
       <HBox layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane maxHeight="550.0" maxWidth="230.0" minHeight="550.0" minWidth="230.0" prefHeight="550.0" prefWidth="230.0" styleClass="sidebar">
@@ -44,9 +44,14 @@
                               <Button mnemonicParsing="false" onAction="#goToAdmActiveChannels" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Canais Ativos" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="230.0">
+                           <children>
+                              <Button fx:id="buttomEditChannel" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Editar Canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="48.0" prefWidth="230.0">
                            <children>
-                              <Button fx:id="buttomAddCanais" mnemonicParsing="false" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarSelectedButton" text="Adicionar Canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                              <Button fx:id="buttomAddCanais" mnemonicParsing="false" onAction="#goToAdmDefaultChannelRegister" prefHeight="60.0" prefWidth="230.0" styleClass="sidebarButtons" text="Adicionar Canais" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="48.0" prefWidth="230.0">
@@ -79,12 +84,12 @@
                      <children>
                         <AnchorPane prefHeight="170.0" prefWidth="870.0">
                            <children>
-                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Adicionar Canais" AnchorPane.bottomAnchor="61.98046875" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="36.41796875" />
+                              <Text layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerText" text="Editar Canais" AnchorPane.bottomAnchor="61.98046875" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="36.41796875" />
                            </children>
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1105.0" style="-fx-background-color: FFFFFF;">
                            <children>
-                              <TextField fx:id="channel_input_field" layoutX="46.0" layoutY="39.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0">
+                              <TextField fx:id="selectedChannel" layoutX="46.0" layoutY="39.0" prefHeight="34.0" prefWidth="205.0" promptText="ex: MercadoLivre" styleClass="searchField" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font name="Ubuntu" size="14.0" />
                                  </font>
@@ -104,9 +109,9 @@
                                     <Font name="Ubuntu" size="13.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="type_channel" layoutX="330.0" layoutY="41.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="40.0" />
-                              <ComboBox fx:id="authentication_type" layoutX="525.0" layoutY="40.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0" />
-                              <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="646.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveChannelAction" prefHeight="34.0" prefWidth="186.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="38.0" />
+                              <ComboBox fx:id="typeChannel" layoutX="330.0" layoutY="41.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="40.0" />
+                              <ComboBox fx:id="typeAuthentication" layoutX="525.0" layoutY="40.0" prefHeight="40.0" prefWidth="205.0" styleClass="searchField" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0" />
+                              <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="646.0" layoutY="369.0" mnemonicParsing="false" onMouseClicked="#onSaveButtonClicked" prefHeight="34.0" prefWidth="186.0" styleClass="saveButton" text="Salvar" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="38.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -115,5 +120,5 @@
             </AnchorPane>
          </children>
       </HBox>
-    </children>
+   </children>
 </AnchorPane>

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-public class admCreateAccountController {
+public class AdmCreateAccountController {
     @FXML
     private TextField InputNome;
     @FXML

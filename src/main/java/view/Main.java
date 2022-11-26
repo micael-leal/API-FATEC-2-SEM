@@ -1,6 +1,7 @@
 package view;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -87,6 +88,11 @@ public class Main extends Application {
                 AnchorPane fxmlUserFAQ = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlUserFAQ.fxml")));
                 Scene userFAQScreen = new Scene(fxmlUserFAQ);
                 stage.setScene(userFAQScreen);
+            }
+            case "AdmEditChannelConfig" ->{
+                AnchorPane fxmlAdmEditChannel = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/fxmlAdmEditChannel")));
+                Scene AdmEditChannel = new Scene(fxmlAdmEditChannel);
+                stage.setScene(AdmEditChannel);
             }
         }
     }

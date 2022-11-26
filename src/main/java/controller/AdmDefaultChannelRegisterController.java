@@ -18,7 +18,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
-public class admDefaultChannelRegisterController implements Initializable {
+public class AdmDefaultChannelRegisterController implements Initializable {
     @FXML
     private ComboBox<String> type_channel;
 
