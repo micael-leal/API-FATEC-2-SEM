@@ -108,6 +108,11 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
 ![Equipe bytech](/src/main/resources/burndown_3.png)
 
 <br>
+<h1 align="center"><samp>QUARTA SPRINT</samp></h1>
+
+![Equipe bytech](/src/main/resources/Burndown_4.png)
+
+<br>
 <h1 align="center"><samp>DETALHES DAS SPRINTS</samp></h1>
 <h2>Sprint 1</h2>
 <details>
@@ -234,6 +239,46 @@ O presente projeto tem por objetivo desenvolver um sistema desktop capaz de arma
   <p align="justify">Tela para entrar como administrador, na qual o mesmo poderá escolher fazer login como administrador ou simular um cliente.</p>
 
 
+</details>
+
+<h2>Sprint 4</h2>
+<details>
+  <summary>Detalhes</summary>
+  <br>
+  <h4 align="center">Atalhos de teclado</h4>
+  <p align="center">
+    <img src=" /src/main/resources/atalhotab.gif" width="65%" />
+  </p>
+  <p align="justify">Usando a tecla TAB, é possível navegar pelo conteúdo com mais facilidade.</p>
+  
+  <br>
+  <h4 align="center">Mostrar senha</h4>
+  <p align="center">
+    <img src=" /src/main/resources/showSenha.gif" width="65%" />
+  </p>
+  <p align="justify">É possível ver a sua senha no momento de log-in, basta apenas clicar no checkbox abaixo.</p>
+  
+  <br>
+  <h4 align="center">Atualização no estilo</h4>
+  <p align="center">
+    <img src=" /src/main/resources/botoeshover.gif" width="65%" />
+  </p>
+  <p align="justify">Foi adicionado o efeito hover nos botões para melhorar a usabilidade da aplicação.</p>
+  
+  <br>
+  <h4 align="center">Editar e remover canais como administrador</h4>
+  <p align="center">
+    <img src=" /src/main/resources/editDeleteAdm.gif" width="65%" />
+  </p>
+  <p align="justify">O administrador pode editar ou deletar os canais padrão criados anteriormente, caso seja necessário.</p>
+  
+  <br>
+  <h4 align="center">Adicionar um novo administrador</h4>
+  <p align="center">
+    <img src=" /src/main/resources/addAdm.gif" width="65%" />
+  </p>
+  <p align="justify">Um administrador já cadastrado pode criar o acesso de um novo administrador no sistema.</p>
+  
 </details>
   
 <br>
